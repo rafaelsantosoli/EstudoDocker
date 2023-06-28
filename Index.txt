@@ -1,0 +1,10 @@
+1 - Introdução
+2 - Trabalhando com containers
+3 - Imagens e avançando em containers
+4 - Introduzindo volumes aos containers
+5 - conectando containers em networks
+6 - Introdução ao yaml
+7 - Docker compose
+8 - Docker swarm
+9 - Kubernetes
+Extras: Terminal e Shell essencial

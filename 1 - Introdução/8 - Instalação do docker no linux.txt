@@ -1,0 +1,24 @@
+Instalação do docker no linux 
+
+Para instalar o docker no linux vamos precisar escolher a versão baseada na nossa distribuição, para isso vamos acessar o link abaixo e escolher a nossa distribuição.
+
+ubuntu
+https://docs.docker.com/engine/install/ubuntu/
+
+Arch
+https://docs.docker.com/desktop/install/archlinux/
+
+Fedora
+https://docs.docker.com/engine/install/fedora/
+
+Debian
+https://docs.docker.com/engine/install/debian/
+
+Alpine
+https://wiki.alpinelinux.org/wiki/Docker
+
+
+
+
+
+

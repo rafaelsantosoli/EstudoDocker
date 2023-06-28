@@ -1,0 +1,12 @@
+Instalação docker no mac (https://docs.docker.com/docker-for-mac/install/)
+
+# Path: 1 - Introdução\Instalação docker no mac.txt
+Instalação docker no mac (https://docs.docker.com/docker-for-mac/install/)
+
+Para MEC vamos instalar um software chamado docker desktop, que é um software que permite a criação de containers, que são ambientes isolados para a execução de aplicações.
+
+Com ele virá a possibilidade de rodar o docker no terminal.
+
+Docker desktop é uma interface gráfica para o docker.
+
+É o mesmo software do windows.
