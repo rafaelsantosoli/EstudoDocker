@@ -1,0 +1,36 @@
+Extensão do Docker do VsCode
+(https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)
+
+A Extensão de docker no VsCode ajuda a gerenciar os containers e imagens do docker, além de permitir a criação de arquivos Dockerfile e docker-compose.yml.
+
+Esta Extensão sugere código (auto complete) para os arquivos Dockerfile e docker-compose.yml.
+
+## Instalação
+
+Para instalar a extensão, abra o VsCode e clique no ícone de extensões (ou use o atalho Ctrl+Shift+X). Na barra de busca, digite "docker" e clique em "Install".
+
+## Utilização
+
+### Gerenciamento de containers e imagens
+
+Para gerenciar os containers e imagens, clique no ícone do Docker na barra lateral do VsCode.
+
+![Docker](./images/docker.png)
+
+### Criação de arquivos Dockerfile e docker-compose.yml
+
+Para criar um arquivo Dockerfile, clique com o botão direito na pasta desejada e selecione a opção "Add Dockerfile".
+
+![Dockerfile](./images/dockerfile.png)
+
+Para criar um arquivo docker-compose.yml, clique com o botão direito na pasta desejada e selecione a opção "Add docker-compose.yml".
+
+![Dockerfile](./images/docker-compose.png)
+
+### Sugestão de código
+
+A extensão sugere código para os arquivos Dockerfile e docker-compose.yml.
+
+![Dockerfile](./images/dockerfile-sugestao.png)
+
+![Dockerfile](./images/docker-compose-sugestao.png)

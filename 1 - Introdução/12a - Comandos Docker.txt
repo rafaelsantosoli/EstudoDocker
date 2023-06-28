@@ -1,0 +1,90 @@
+Comandos Docker 
+
+Para listar os containers em execução utilizamos o comando docker ps.
+
+Para listar todos os containers, incluindo os que não estão em execução, utilizamos o comando docker ps -a.
+
+Para listar as imagens que temos no host utilizamos o comando docker images.
+
+Para baixar uma imagem do Docker Hub utilizamos o comando docker pull.
+
+Exemplo: docker pull debian
+    O comando docker pull debian vai baixar a imagem debian do Docker Hub.
+
+Para remover uma imagem do host utilizamos o comando docker rmi.
+
+Exemplo: docker rmi debian
+    O comando docker rmi debian vai remover a imagem debian do host.
+
+Para remover um container do host utilizamos o comando docker rm.
+
+Exemplo: docker rm 1234567890
+    O comando docker rm 1234567890 vai remover o container 1234567890 do host.
+
+Para parar um container utilizamos o comando docker stop.
+
+Exemplo: docker stop 1234567890
+    O comando docker stop 1234567890 vai parar o container 1234567890.
+
+Para iniciar um container utilizamos o comando docker start.
+
+Exemplo: docker start 1234567890
+    O comando docker start 1234567890 vai iniciar o container 1234567890.
+
+Para executar um comando dentro de um container utilizamos o comando docker exec.
+
+Exemplo: docker exec 1234567890 ls -l
+    O comando docker exec 1234567890 ls -l vai executar o comando ls -l dentro do container 1234567890.
+
+Para executar um container em modo interativo utilizamos o comando docker run -it.
+
+Exemplo: docker run -it debian bash
+    O comando docker run -it debian bash vai executar o container debian em modo interativo com o bash.
+
+Para executar um container em modo daemon utilizamos o comando docker run -d.
+
+Exemplo: docker run -d debian sleep 1000
+    O comando docker run -d debian sleep 1000 vai executar o container debian em modo daemon com o comando sleep 1000.
+
+Para executar um container em modo daemon e mapear uma porta utilizamos o comando docker run -d -p.
+
+Exemplo: docker run -d -p 8080:80 nginx
+    O comando docker run -d -p 8080:80 nginx vai executar o container nginx em modo daemon e mapear a porta 80 do container para a porta 8080 do host.
+
+Para executar um container em modo daemon e mapear um volume utilizamos o comando docker run -d -v.
+
+Exemplo: docker run -d -v /home/rodrigo:/var/www/html nginx
+    O comando docker run -d -v /home/rodrigo:/var/www/html nginx vai executar o container nginx em modo daemon e mapear o diretório /home/rodrigo do host para o diretório /var/www/html do container.
+
+Para executar um container em modo daemon e mapear um volume e uma porta utilizamos o comando docker run -d -p -v.
+
+Exemplo: docker run -d -p 8080:80 -v /home/rodrigo:/var/www/html nginx
+    O comando docker run -d -p 8080:80 -v /home/rodrigo:/var/www/html nginx vai executar o container nginx em modo daemon e mapear a porta 80 do container para a porta 8080 do host e mapear o diretório /home/rodrigo do host para o diretório /var/www/html do container.
+
+Para executar um container em modo daemon e mapear um volume e uma porta e definir um nome para o container utilizamos o comando docker run -d -p -v --name.
+
+Exemplo: docker run -d -p 8080:80 -v /home/rodrigo:/var/www/html --name nginx-server nginx
+    O comando docker run -d -p 8080:80 -v /home/rodrigo:/var/www/html --name nginx-server nginx vai executar o container nginx em modo daemon e mapear a porta 80 do container para a porta 8080 do host e mapear o diretório /home/rodrigo do host para o diretório /var/www/html do container e definir o nome nginx-server para o container.
+
+Para executar um container em modo daemon e mapear um volume e uma porta e definir um nome para o container e definir um hostname para o container utilizamos o comando docker run -d -p -v --name --hostname.
+
+Exemplo: docker run -d -p 8080:80 -v /home/rodrigo:/var/www/html --name nginx-server --hostname nginx-server nginx
+    O comando docker run -d -p 8080:80 -v /home/rodrigo:/var/www/html --name nginx-server --hostname nginx-server nginx vai executar o container nginx em modo daemon e mapear a porta 80 do container para a porta 8080 do host e mapear o diretório /home/rodrigo do host para o diretório /var/www/html do container e definir o nome nginx-server para o container e definir o hostname nginx-server para o container.
+
+Para executar um container em modo daemon e mapear um volume e uma porta e definir um nome para o container e definir um hostname para o container e definir um IP para o container utilizamos o comando docker run -d -p -v --name --hostname --ip.
+
+Exemplo: docker run -d -p 8080:80 -v /home/rodrigo:/var/www/html --name nginx-server --hostname nginx-server --ip
+
+Para executar um container em modo daemon e mapear um volume e uma porta e definir um nome para o container e definir um hostname para o container e definir um IP para o container e definir um DNS para o container utilizamos o comando docker run -d -p -v --name --hostname --ip --dns.
+
+Exemplo: docker run -d -p 8080:80 -v /home/rodrigo:/var/www/html --name nginx-server --hostname nginx-server --ip --dns
+
+Para executar um container em modo daemon e mapear um volume e uma porta e definir um nome para o container e definir um hostname para o container e definir um IP para o container e definir um DNS para o container e definir um DNS Search para o container utilizamos o comando docker run -d -p -v --name --hostname --ip --dns --dns-search.
+
+Exemplo: docker run -d -p 8080:80 -v /home/rodrigo:/var/www/html --name nginx-server --hostname nginx-server --ip --dns --dns-search
+
+Para executar um container em modo daemon e mapear um volume e uma porta e definir um nome para o container e definir um hostname para o container e definir um IP para o container e definir um DNS para o container e definir um DNS Search para o container e definir um DNS Search para o container e definir um DNS Search para o container utilizamos o comando docker run -d -p -v --name --hostname --ip --dns --dns-search --dns-search.
+
+Exemplo: docker run -d -p 8080:80 -v /home/rodrigo:/var/www/html --name nginx-server --hostname nginx-server --ip --dns --dns-search --dns-search
+
+Para executar um container em modo daemon e mapear um volume e uma porta e definir um nome para o container e definir um hostname para o container e definir um IP para o container e definir um DNS para o cont
