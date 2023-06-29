@@ -20,6 +20,7 @@
         "dotjoshjohnson.xml",
         "redhat.vscode-yaml",
         "mikestead.dotenv",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "yzhang.markdown-all-in-one"
     ]
 }
