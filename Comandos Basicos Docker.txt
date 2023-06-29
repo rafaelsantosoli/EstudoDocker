@@ -1,4 +1,4 @@
-Comandos Docker 
+Comandos Docker  
 
 Para listar os containers em execução utilizamos o comando docker ps.
 
