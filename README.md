@@ -20,7 +20,7 @@
 
 No terminal, clone o projeto: 
 
-    git clone https://github.com/rafaelsantosoli/EstudoDocker.git
+    git clone https://github.com/(seu usuário)/EstudoDocker.git    
 
 
 # 📖 Índice
