@@ -1,0 +1,41 @@
+Container x VM (Virtual Machine)
+
+- Container é uma aplicação que serve para um determinado fim, não possui sistema operacional, seu tamanho é de alguns megabytes, e é executado em cima de um sistema operacional, que pode ser Linux ou Windows.
+
+- VM é uma máquina virtual, que possui um sistema operacional, e pode ser executado em cima de um sistema operacional, que pode ser Linux ou Windows.
+
+- Container é mais leve que uma VM, pois não possui um sistema operacional, e sim uma aplicação que serve para um determinado fim.
+
+- VM é mais pesado que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
+
+- Container é mais rápido que uma VM, pois não possui um sistema operacional, e sim uma aplicação que serve para um determinado fim.
+
+- VM é mais lento que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
+
+- Container é mais seguro que uma VM, pois não possui um sistema operacional, e sim uma aplicação que serve para um determinado fim.
+
+- VM é mais inseguro que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
+
+- Container é mais barato que uma VM, pois não possui um sistema operacional, e sim uma aplicação que serve para um determinado fim.
+
+- VM é mais caro que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
+
+- Container é mais escalável que uma VM, pois não possui um sistema operacional, e sim uma aplicação que serve para um determinado fim.
+
+- VM é mais escalável que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
+
+- Container é mais portável que uma VM, pois não possui um sistema operacional, e sim uma aplicação que serve para um determinado fim.
+
+- VM é mais portável que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
+
+- Container é mais flexível que uma VM, pois não possui um sistema operacional, e sim uma aplicação que serve para um determinado fim.
+
+- VM é mais flexível que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
+
+- Container é mais fácil de gerenciar que uma VM, pois não possui um sistema operacional, e sim uma aplicação que serve para um determinado fim.
+
+- VM é mais difícil de gerenciar que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
+
+- Container é mais fácil de manter que uma VM, pois não possui um sistema operacional, e sim uma aplicação que serve para um determinado fim.
+
+- VM é mais difícil de manter que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
