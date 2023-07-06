@@ -15,4 +15,7 @@ Este arquivo contém uma lista de comandos básicos para o Windows Subsystem for
 - `wsl --status`: Exibe informações sobre o estado atual do WSL.
 - `wsl --help`: Exibe a ajuda do WSL.
 - `wsl --help <command>`: Exibe a ajuda de um comando específico do WSL.
-- 
+
+## Referências
+
+- [WSL Command Reference](https://docs.microsoft.com/en-us/windows/wsl/reference)
