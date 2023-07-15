@@ -1,5 +1,10 @@
 # Removendo imagens, containers, volumes e networks
 
+- Para remover tudo com um único comando, basta executar o comando `docker system prune -a`, o comando `docker system prune -a` remove todas as imagens, todos os containers, todos os volumes e todas as networks.
+  - A flag `-a` remove todas as imagens, todos os containers, todos os volumes e todas as networks.
+  - A flag `-f` força a remoção de todos os containers, todas as imagens, todos os volumes e todas as networks.
+- É possível remover imagens, containers, volumes e networks individualmente, basta executar os comandos abaixo.
+
 ## Removendo imagens
 
 - Para remover uma imagem, basta executar o comando `docker rmi <nome da imagem>` ou `docker rmi <id da imagem>`
