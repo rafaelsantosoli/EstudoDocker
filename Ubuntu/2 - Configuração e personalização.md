@@ -221,6 +221,8 @@ sudo apt install ansible -y
 
 ```
 
+Exemplos: ["O mínimo que você precisa saber sobre ANSIBLE!"](https://www.youtube.com/watch?v=y5eKF_XnGyE)
+
 
 ## Instalando Git - Controle de versão
 

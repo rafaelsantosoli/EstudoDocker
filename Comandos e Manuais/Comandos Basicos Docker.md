@@ -93,6 +93,14 @@ Exemplo: `docker run -d -v /home/rodrigo:/var/www/html nginx`
 
 O comando `docker run -d -v /home/rodrigo:/var/www/html nginx` vai executar o container nginx em modo daemon e mapear o diretório `/home/rodrigo` do host para o diretório `/var/www/html` do container.
 
+## Para retornar o volume utilizado por um container
+
+Para retornar o volume utilizado por um container utilizamos o comando `docker inspect`.
+
+Exemplo: `docker inspect 1234567890`
+
+
+
 ## Mapear porta e volume do host para o container
 
 Para executar um container em modo daemon e mapear um volume e uma porta utilizamos o comando `docker run -d -p -v`.
