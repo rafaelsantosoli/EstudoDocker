@@ -6,7 +6,7 @@
 
 ```powershell
 
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+$ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 
 ```
 - Este comando habilita o recurso do WSL no Windows.
@@ -21,7 +21,7 @@ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux 
 
 ```powershell
 
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+$ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
 ```
 - Este comando habilita o recurso de máquina virtual no Windows.
@@ -90,7 +90,40 @@ wsl --install <distro_name>
 - `--install`: Instala a última versão do kernel do Linux para o WSL2.
 - `<distro_name>`: Nome da distribuição Linux que será instalada.
 
-3. Execute o comando abaixo para verificar se o Ubuntu foi instalado:
+3. Como exemplo, estaremos instalando o Ubuntu-22.04 através do comando abaixo:
+  
+  ```powershell
+
+  wsl --install --distribution Ubuntu-22.04
+
+  ```
+  - Este comando instala a última versão do kernel do Linux para o WSL2 e a distribuição Ubuntu-22.04.
+
+  - Ao executá-lo, será apresentado um prompt conforme abaixo, solicitando um usuário para o Ubuntu:
+
+  ```powershell	
+  C:\Users\thite> wsl --install --distribution Ubuntu-22.04
+
+      Ubuntu 22.04 LTS já está instalado.
+      Iniciando Ubuntu 22.04 LTS...
+      Installing, this may take a few minutes...
+      Please create a default UNIX user account. The username does not need to match your Windows username.
+      For more information visit: https://aka.ms/ wslusers
+      Enter new UNIX username: tmoreira
+```
+
+  - Neste exemplo, foi criado o usuário 'tmoreira'. Em seguida, será solicitado uma senha para o usuário recém-criado:
+
+  ```powershell
+  New password:
+  Retype new password:
+  passwd: password updated successfully
+  Installation successful!
+  ```
+  - Após digitar a senha e confirmá-la, será criado o usuário e apresentará a mensagem `Installation successful!` indicando que a instalação foi concluída com sucesso.
+
+
+4. Execute o comando abaixo para verificar se o Ubuntu foi instalado:
 
 ```powershell
 
@@ -98,13 +131,19 @@ wsl --list --verbose
 
 ```
 
-4. Execute o comando abaixo para iniciar o Ubuntu:
+5. Execute o comando abaixo para iniciar o Ubuntu:
 
 ```powershell
 
-wsl
+ubuntu2204
 
 ```
+ou
+  
+  ```powershell
+  start ubuntu2204.exe
+  ```
+  
 
 ## Atualizando o Ubuntu
 
@@ -154,6 +193,11 @@ Para definir que o systemd será o gerenciador de serviços do Ubuntu, execute o
 
 - Reinicie o Ubuntu para aplicar as alterações.
 
+```bash	
+sudo reboot
+```
+
+
  ![Alt text](/Ubuntu/Imagens/wsl.conf.png)
 
 
@@ -167,18 +211,18 @@ Para definir que o systemd será o gerenciador de serviços do Ubuntu, execute o
 
 ```bash
 
-systemctl list-units-files
+systemctl list-unit-files
 
 ```
 
 Explicando o comando acima:
 
 - `systemctl`: Comando para gerenciar serviços.
-- `list-units-files`: Lista os serviços instalados.
-- `list-units-files --type=service`: Lista os serviços instalados.
-- `list-units-files --type=service --state=enabled`: Lista os serviços instalados e habilitados.
-- `list-units-files --type=service --state=disabled`: Lista os serviços instalados e desabilitados.
-- `list-units-files --type=service --state=masked`: Lista os serviços instalados e mascarados. 
+- `list-unit-files`: Lista os serviços instalados.
+- `list-unit-files --type=service`: Lista os serviços instalados.
+- `list-unit-files --type=service --state=enabled`: Lista os serviços instalados e habilitados.
+- `list-unit-files --type=service --state=disabled`: Lista os serviços instalados e desabilitados.
+- `list-unit-files --type=service --state=masked`: Lista os serviços instalados e mascarados. 
 
 
 
