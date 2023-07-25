@@ -50,7 +50,7 @@
 - No seu terminal Linux, digite o comando abaixo para checar a criação com sucesso da pasta da etapa anterior:
     
     ```bash
-    ls -la
+    $ ls -la
     ```
     ![Alt text](image-3.png)
 
@@ -60,8 +60,8 @@
 - No terminal do linux, digite os comandos a seguir:
 
 ```bash	
-cd /mnt/
-ls -la
+$ cd /mnt/
+$ ls -la
 ```
 
 - Esse comando irá apresentar todos os drives do Windows. No nosso caso, o drive 'c' é o que contém os arquivos do Windows.
@@ -70,8 +70,8 @@ ls -la
 - Para criar uma pasta no drive 'c' do windows, digite os comandos abaixo. Caso queira, é possível alterar o nome 'linux_shared' para o nome que desejar.
 
 ```bash
-cd /mnt/c
-mkdir linux_shared
+$ cd /mnt/c
+$ mkdir linux_shared
 ```
 
 - Após execução do comando de criação de pasta, navegue até a pasta através do Windows Explorer para verificar se deu certo:
