@@ -1,43 +1,46 @@
 # Instalando Git no Ubuntu
 
 ## Configurações iniciais
-
-### Criação de usuário
-
-- No terminal Linux, conforme configurado na etapa anterior, execute o comando abaixo para criar um usuário. No nosso caso, o nome do usuário será 'git':
+- Antes de instalar o Git, é necessário atualizar os pacotes do sistema. Para isso, execute o comando abaixo:
 
 ```bash
-sudo adduser git
+sudo apt-get update && sudo apt get upgrade
 ```
 
-- Será apresentado um retorno conforme abaixo no console:
+## Configurando o Git
+- A maioria das distribuições Linux já vem com o Git instalado, mas caso não tenha, execute o comando abaixo para instalar:
 
 ```bash
-tmoreira@CASTLEVANIA:/mnt/c$ sudo adduser git
-[sudo] password for tmoreira:
-Adding user `git' ...
-Adding new group `git' (1001) ...
-Adding new user `git' (1001) with group `git' ...
-Creating home directory `/home/git' ...
-Copying files from `/etc/skel' ...
-New password:
-Retype new password:
-passwd: password updated successfully
-Changing the user information for git
-Enter the new value, or press ENTER for the default
-        Full Name []: Git
-        Room Number []:
-        Work Phone []:
-        Home Phone []:
-        Other []:
-Is the information correct? [Y/n]
+sudo apt-get install git
 ```
 
-### Dando Privilégios de sudo (Administrativos) ao usuário
-
-- Execute o comando abaixo para dar privilégios de sudo ao usuário criado:
+- Para verificar a versão do Git instalada, execute o comando abaixo:
 
 ```bash
-usermod -aG sudo git
-``` 
+git --version
+```
 
+- Para configurar os parâmetros mandatórios, utilize os comandos abaixo:
+
+```bash
+git config --global user.name "Seu Nome"
+git config --global user.email "Seu email"
+```
+
+- Para verificar as configurações, execute o comando abaixo:
+
+```bash
+git config --list
+```
+
+- Você também pode querer trocar o nome da sua branch. Por padrão, o nome é "master", mas você pode renomeá-la para "main" com o comando abaixo:
+
+```bash
+git config --global init.defaultBranch main
+```
+
+- Outra configuração que você pode querer modificar é a do editor padrão do Git. O editor de texto padrão associado é o Vim, mas você pode alterar para o editor de sua preferência. No exemplo abaixo, vamos alterar para o 'nano'':
+
+```bash
+git config --global core.editor "nano"
+```
