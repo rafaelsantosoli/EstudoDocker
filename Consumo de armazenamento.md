@@ -70,6 +70,23 @@ docker volume ls -q | xargs docker volume inspect --format '{{ .Name }} {{ .Moun
 docker volume rm $(docker volume ls -q)
 
 ```
+# Consumo de memória e CPU no docker
+
+Para verificar o consumo de memória e CPU no docker utilizamos o comando docker stats.
+
+## Comando para verificar o consumo de memória e CPU no docker
+
+```bash
+
+docker stats
+
+```
+
+## Exemplo de consumo de memória e CPU no docker
+
+- Imagem: ubuntu:latest
+
+
 
 
 

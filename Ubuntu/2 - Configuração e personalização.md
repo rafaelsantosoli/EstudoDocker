@@ -258,31 +258,188 @@ Para verificar se a configuração foi aplicada, execute o comando abaixo:
 git config --list
 
 ```
+## Instalando Vim - Editor de texto
+
+O Vim é um editor de texto que permite editar arquivos de texto.
+[Como (e por que) eu uso Vim](https://medium.com/campuscode/como-e-por-que-eu-uso-vim-7cd03df0211b)
+
+Vantagens do Vim:
+
+- Não precisa usar o mouse.
+- Leve.
+- Pode ser usado em servidores.
+- Velocidade.
+- Personalização.
+- Variedade de plugins.
+- Portabilidade.
+- Pode ser usado em modo gráfico ou texto.
 
 
-### Personalização do terminal - Shell
+### Instalando o Vim - Editor de texto
 
-#### Instalando o Meslo Nerd Font - Fonte para o terminal
+- Para instalar o Vim, execute o comando abaixo:
 
-#### Configurando o tema do terminal - Shell
+```bash
 
-#### Instalando o Zsh - Shell
+sudo apt install vim -y
 
-### Instalando Vim - Editor de texto
+```
 
-#### Instalando o Vim-Plug - Gerenciador de plugins para o Vim
+- Para verificar se o Vim foi instalado, execute o comando abaixo:
 
-## Instalando VSCode - Editor de código
+```bash
 
-## Instalando Docker - Container
+vim --version
 
-## Instalando Docker Compose - Orquestrador de containers
+```
 
-## Instalando asdf - Gerenciador de versões
+## Instalando neovim - Editor de texto
 
-#### Instalando o Oh My Zsh - Framework para o Zsh
+O neovim é um editor de texto que permite editar arquivos de texto.
 
-#### Instalando o Powerlevel10k - Tema para o Oh My Zsh
+Neovim é um fork do Vim que permite.
+
+### Instalando o neovim - Editor de texto
+
+- Para instalar o neovim, execute o comando abaixo:
+
+```bash
+
+sudo apt install neovim -y
+
+```
+
+- Para verificar se o neovim foi instalado, execute o comando abaixo:
+
+```bash
+
+nvim --version
+
+```
+
+
+## Personalização do terminal - Shell
+
+### Instalando o Oh My Zsh - Framework para o Zsh
+
+o Oh My Zsh é um framework para o Zsh que permite personalizar o terminal.
+
+Vantagens do Oh My Zsh:
+
+- Autocompletar comandos, nomes de arquivos e diretórios.
+- Correção de erros de digitação.
+- Gerenciamento de plugins.
+- Gerenciamento avançado de histórico de comandos.
+
+## Instalando o Zsh - Shell
+
+[Instalando o Z Shell (ZSH) no Ubuntu 20.04](https://medium.com/@gutoinfo.ribeiro/instalando-e-configurando-o-zsh-no-ubuntu-20-04-4ef8a2499ed5)
+
+Para instalar o Oh My Zsh, execute o comando abaixo:
+
+```bash
+
+sudo apt install zsh -y
+
+```
+
+```
+
+Para verificar se o Oh My Zsh foi instalado, execute o comando abaixo:
+
+```bash
+
+zsh --version
+
+```
+será exibido a mensagem abaixo:
+
+```bash
+
+zsh 5.8 (x86_64-ubuntu-linux-gnu)
+
+```
+
+## Definindo o Zsh como shell padrão
+
+Para definir o Zsh como shell padrão, execute o comando abaixo:
+
+```bash
+
+whereis zsh
+
+
+```
+Será exibido  o caminho do binário do Zsh.
+
+Exemplo:
+
+```bash
+
+zsh: /usr/bin/zsh /usr/lib/x86_64-linux-gnu/zsh /etc/zsh /usr/share/zsh /usr/share/man/man1/zsh.1.gz
+
+```
+
+Para definir o Zsh como shell padrão, execute o comando abaixo:
+
+```bash
+
+sudo usermod -s /usr/bin/zsh $(whoami)
+
+```
+
+ou podemos executar o comando abaixo:
+
+```bash
+
+chsh -s /usr/bin/zsh
+
+```
+
+
+
+Explicando o comando acima:
+
+- `sudo`: Executa o comando como administrador.
+- `usermod`: Comando para modificar um usuário.
+- `-s`: Define o shell padrão.
+- `/usr/bin/zsh`: Caminho do binário do Zsh.
+- `$(whoami)`: Nome do usuário que será modificado.
+
+Feche o terminal e abra novamente para aplicar as alterações.
+
+Será exibido opções para configurar o Oh My Zsh.
+
+As opções são:
+
+- (0) - Quit and do nothing. Continue to use Bash.
+- (1) - Exit, creating a single-line ~/.zshrc you can inspect for changes and then run manually.
+- (2) - Continue to the main menu.
+- (3) - Populate your ~/.zshrc with the configuration recommended by the system administrator and exit (you will need to edit the file by hand, if so desired).
+
+Digite `2` e pressione `Enter`.
+
+Será exibido o menu do Oh My Zsh.
+
+
+### Personalizando o terminal - Oh My Zsh com Powerlevel10k
+
+https://github.com/romkatv/powerlevel10k
+
+Para instalar e aplicar, execute os comandos abaixo:
+
+```bash
+
+  apk add git zsh nano vim
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/powerlevel10k
+  echo "source ~/powerlevel10k/powerlevel10k.zsh-theme" >>~/.zshrc
+  cd ~/powerlevel10k
+  exec zsh
+
+```
+
+
+
 
 
 

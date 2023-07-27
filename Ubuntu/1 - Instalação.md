@@ -68,6 +68,53 @@ wsl --list --verbose
 
 ```
 
+### Possíveis erros:
+
+Erro de comando não encontrado:
+
+```powershell
+
+wsl : O termo 'wsl' não é reconhecido como nome de cmdlet, função, arquivo de script ou programa operável. Verifique a grafia do nome ou, se um caminho tiver sido incluído, veja se o caminho está correto e tente novamente.
+
+```
+
+Solução:
+
+- Execute o comando abaixo para verificar se o WSL está habilitado:
+
+```powershell
+
+Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+```
+
+- Caso o comando acima retorne o valor `False`, execute o comando abaixo para habilitar o WSL:
+
+```powershell
+
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+```
+
+- Em seguida, execute o comando abaixo para verificar se o WSL foi habilitado:
+
+```powershell
+
+Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+
+```
+
+- Caso o comando acima retorne o valor `True`, execute o comando abaixo para verificar se o WSL2 está definido como padrão:
+
+```powershell
+
+wsl --list --verbose
+
+```
+
+
+
+
 ## Instalando o Ubuntu
 
 1. Abra terminal do Windows (PowerShell) e execute o comando abaixo para listar as distribuições Linux disponíveis:
