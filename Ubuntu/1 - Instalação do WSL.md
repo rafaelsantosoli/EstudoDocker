@@ -4,7 +4,7 @@ O WSL 2 é a segunda geração do Windows Subsystem for Linux (WSL), um ambiente
 
 ## Por que usar o WSL 2?
 
-O WSL 2 é uma nova versão do WSL e é uma atualização automática. Como o WSL 2 é um ambiente de execução separado, você pode ter as duas versões (WSL 1 e WSL 2) no mesmo dispositivo e escolher qual usar por padrão. O WSL 2 é recomendado se você estiver executando um aplicativo que requer um kernel Linux completo e/ou se você estiver executando um aplicativo que interage com o hardware, a rede ou o sistema de arquivos, como Docker ou o FUSE.
+O WSL 2 é uma nova versão do WSL e é uma atualização automática. Como o WSL 2 é um ambiente de execução separado, você pode ter as duas versões `(WSL 1 e WSL 2)` no mesmo dispositivo e escolher qual usar por padrão. O WSL 2 é recomendado se você estiver executando um aplicativo que requer um kernel Linux completo e/ou se você estiver executando um aplicativo que interage com o hardware, a rede ou o sistema de arquivos, como Docker ou o FUSE.
 
 As principais melhorias do WSL 2 são:
 
