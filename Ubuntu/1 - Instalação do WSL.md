@@ -166,8 +166,118 @@ wsl --install -d Ubuntu
 
 ```
 
+## Mover ou importar a instalação do WSL2 para outro local
+
+1. Abra o PowerShell como administrador e execute o comando abaixo:
+
+```powershell
+
+wsl --list --verbose
+
+```
+
+2. Execute o comando abaixo para desligar o WSL2:
+
+```powershell
+
+wsl --shutdown
+
+```
+
+3. Execute o comando abaixo para exportar a instalação do WSL2 para um arquivo tar:
+
+```powershell
+
+wsl --export <distro_name> <file_name>
+
+```
+- Exemplo:
+
+```powershell
+
+wsl --export Ubuntu-20.04 ubuntu.tar
+
+```
+- No exemplo acima, o arquivo `ubuntu.tar` será criado no diretório atual.
+- Caso deseje criar o arquivo em outro diretório, informe o caminho completo do arquivo.
+  - Exemplo:
+
+  ```powershell
+
+  wsl --export Ubuntu-20.04 C:\Users\user\Documents\ubuntu.tar
+
+  ```
+
+  - Também é possível exportar a instalação do WSL2 para um arquivo tar compactado.
+
+  ```powershell
+
+  wsl --export Ubuntu-20.04 ubuntu.tar.gz
+
+  ```
+  Esta extensão é utilizada para criar arquivos compactados.
+
+
+  - Ou utilizando a extenção vhd.
+
+  ```powershell
+
+  wsl --export Ubuntu-20.04 ubuntu.vhd
+
+  ```
+  Esta extensão é utilizada para criar discos virtuais.
+
+1. Execute o comando abaixo para importar a instalação do WSL2 a partir de um arquivo tar:
+
+```powershell
+
+wsl --import <distro_name> <install_location> <file_name>
+
+```
+
+- Exemplo:
+
+    ```powershell
+
+    wsl --import Ubuntu-20.04 C:\Users\user\Documents\ubuntu.tar
+
+    ```
+  - Para arquivos com extensão .tar.gz, utilize o comando abaixo:
+
+    ```powershell
+
+    wsl --import Ubuntu-20.04 C:\Users\user\Documents\ubuntu.tar.gz
+
+    ```
+
+  - Para arquivos com extensão .vhd, utilize o comando abaixo:
+
+    ```powershell
+
+    wsl --import Ubuntu-20.04 C:\Users\user\Documents\ubuntu.vhd
+
+    ```
+
+1. Execute o comando abaixo para iniciar o WSL2:
+
+```powershell
+
+wsl
+
+```
+
+6. Execute o comando abaixo para verificar se o WSL2 foi iniciado:
+
+```powershell
+
+wsl --list --verbose
+
+```
+
+
 
 ## Links para guia de instalação
 
 - [Instalando o WSL](https://learn.microsoft.com/pt-br/windows/wsl/install)
 - [Instalação Manual do WSL](https://learn.microsoft.com/pt-br/windows/wsl/install-manual)
+
