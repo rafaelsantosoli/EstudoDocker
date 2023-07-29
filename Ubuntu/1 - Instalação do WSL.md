@@ -1,8 +1,33 @@
+Sumario
+----
+- [O que é WSL 2?](#o-que-é-wsl-2)
+- [Por que usar o WSL 2?](#por-que-usar-o-wsl-2)
+- [Requisitos do sistema](#requisitos-do-sistema)
+  - [Instalação do WSL 2](#instalação-do-wsl-2)
+    - [Instalando o WSL 2 através do PowerShell](#instalando-o-wsl-2-através-do-powershell)
+    - [Instalando o WSL 2 habilitando o recurso no Windows sem instalar a distribuição Linux padrão](#instalando-o-wsl-2-habilitando-o-recurso-no-windows-sem-instalar-a-distribuição-linux-padrão)
+      - [Habilitando o subsistema do Windows para Linux (WSL)](#habilitando-o-subsistema-do-windows-para-linux-wsl)
+      - [Habilitando o recurso de máquina virtual](#habilitando-o-recurso-de-máquina-virtual)
+    - [Instalando e Atualizando o pacote de atualização do kernel do Linux para o WSL2](#instalando-e-atualizando-o-pacote-de-atualização-do-kernel-do-linux-para-o-wsl2)
+  - [Definindo o WSL2 como versão padrão](#definindo-o-wsl2-como-versão-padrão)
+  - [Instalando a distribuição Linux de sua preferência](#instalando-a-distribuição-linux-de-sua-preferência)
+    - [Instalando a distribuição Linux através da Microsoft Store](#instalando-a-distribuição-linux-através-da-microsoft-store)
+    - [Instalando a distribuição Linux através do PowerShell](#instalando-a-distribuição-linux-através-do-powershell)
+  - [Mover ou importar a instalação do WSL2 para outro local](#mover-ou-importar-a-instalação-do-wsl2-para-outro-local)
+    - [Exportando a instalação do WSL2](#exportando-a-instalação-do-wsl2)
+    - [Importando a instalação do WSL2](#importando-a-instalação-do-wsl2)
+    - [Removendo uma distribuição Linux](#removendo-uma-distribuição-linux)
+  - [configurando recursos do computador para o WSL 2](#configurando-recursos-do-computador-para-o-wsl-2)
+    - [Alterando os recursos de uma distribuição Linux no WSL 2 através do PowerShell](#alterando-os-recursos-de-uma-distribuição-linux-no-wsl-2-através-do-powershell)
+    - [Alterando os recursos de uma distribuição Linux no WSL 2 através do arquivo .wslconfig](#alterando-os-recursos-de-uma-distribuição-linux-no-wsl-2-através-do-arquivo-wslconfig)
+  - [Links para guia de instalação](#links-para-guia-de-instalação)
+
+
 # O que é WSL 2?
 
 O WSL 2 é a segunda geração do Windows Subsystem for Linux (WSL), um ambiente de execução do Linux para o Windows. O WSL 2 é um ambiente de execução separado do WSL 1, que utiliza um kernel Linux com uma máquina virtual leve (VM) para gerenciar os recursos do sistema operacional. O WSL 2 é executado em um ambiente virtualizado, mas fornece um desempenho aprimorado e uma experiência de usuário mais integrada com o Windows.
 
-## Por que usar o WSL 2?
+# Por que usar o WSL 2?
 
 O WSL 2 é uma nova versão do WSL e é uma atualização automática. Como o WSL 2 é um ambiente de execução separado, você pode ter as duas versões `(WSL 1 e WSL 2)` no mesmo dispositivo e escolher qual usar por padrão. O WSL 2 é recomendado se você estiver executando um aplicativo que requer um kernel Linux completo e/ou se você estiver executando um aplicativo que interage com o hardware, a rede ou o sistema de arquivos, como Docker ou o FUSE.
 
@@ -13,24 +38,48 @@ As principais melhorias do WSL 2 são:
 - Suporte a aplicativos com várias plataformas: o WSL 2 oferece suporte a aplicativos com várias plataformas, como Docker, que podem ser executados no WSL 2 e acessar o sistema de arquivos do Windows.
 - Melhor integração com o Windows: o WSL 2 oferece uma melhor integração com o Windows. Por exemplo, você pode executar comandos do WSL no Prompt de Comando ou no PowerShell e vice-versa. Além disso, você pode abrir arquivos do Windows no Linux usando o WSL.
 
-## Requisitos do sistema
+
+[Compare as versões do WSL](https://docs.microsoft.com/pt-br/windows/wsl/compare-versions)
+
+# Requisitos do sistema
 
 Para usar o WSL 2, você precisa atender aos seguintes requisitos:
 
-- Windows 10, versão 2004 ou posterior (Build 19041 ou posterior) ou Windows 11
+- Windows 10
+  - Versão 2004 ou posterior (Build 19041 ou posterior)
+  - Para versões anteriores do Windows 10, consulte [Instalação manual do WSL](https://docs.microsoft.com/pt-br/windows/wsl/install-manual).
+  - Caso utilizando Windows 10 é necessário atualizar para a versão 2004 ou posterior (Build 19041 ou posterior).
+
+  - Abaixo estão os links para download da atualização do Windows 10 2022 (versão 22H2):
+
+  - [Atualização do Windows 10 2022 l versão 22H2](https://www.microsoft.com/pt-br/software-download/windows10)
+
+- Windows 11
+  - Versão 21H2 ou posterior (Build 22000 ou posterior)
+
+
 - Um sistema operacional de 64 bits
 - Uma CPU com suporte a virtualização habilitada na BIOS
 - Pelo menos 4 GB de RAM
 - Pelo menos 64 GB de armazenamento disponível
 
-Caso utilizando Windows 10 é necessário atualizar para a versão 2004 ou posterior (Build 19041 ou posterior).
+Para verificar a versão do Windows, execute o comando abaixo no PowerShell ou no executar do Windows:
 
-Abaixo estão os links para download da atualização do Windows 10 2022 (versão 22H2):
+```powershell
 
-[Atualização do Windows 10 2022 l versão 22H2](https://www.microsoft.com/pt-br/software-download/windows10)
+winver
+
+```
+Será exibida uma janela com a versão do Windows instalada.
+
+Exemplo:
+![Alt text](/Ubuntu/Imagens/winver.png)
 
 
-## Comandos de instalação
+
+## Instalação do WSL 2
+
+Verifique se seu Windows está atualizado, pois o WSL 2 depende de uma versão atualizada do Hyper-V. Verifique o Windows Update.
 
 ### Instalando o WSL 2 através do PowerShell
 
@@ -93,7 +142,7 @@ $ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /nor
 
 - Reinicie o computador.
 
-#### Baixando e instalando o pacote de atualização do kernel do Linux para o WSL2
+### Instalando e Atualizando o pacote de atualização do kernel do Linux para o WSL2
 
 - Baixe e instale o pacote de atualização do kernel do Linux para o WSL2:
 
@@ -112,7 +161,7 @@ wsl --install
 wsl --update
 
 ```
-#### Definindo o WSL2 como versão padrão
+## Definindo o WSL2 como versão padrão
 
 - Defina o WSL2 como versão padrão:
 
@@ -122,9 +171,9 @@ wsl --set-default-version 2
 
 ```
 
-#### Instalando a distribuição Linux de sua preferência
+## Instalando a distribuição Linux de sua preferência
 
-##### Instalando a distribuição Linux através da Microsoft Store
+### Instalando a distribuição Linux através da Microsoft Store
 - Abra a Microsoft Store e instale a distribuição Linux de sua preferência.
 - Após a instalação, abra a distribuição Linux e siga as instruções para configurar o usuário e senha.
 - Após a configuração, a distribuição Linux estará pronta para uso.
@@ -135,7 +184,7 @@ Microsoft Store
 Na página da distribuição, selecione "Obter"
 ![Obter](https://learn.microsoft.com/pt-br/windows/wsl/media/ubuntustore.png)
 
-##### Instalando a distribuição Linux através do PowerShell
+### Instalando a distribuição Linux através do PowerShell
 
 Também é possível instalar a distribuição Linux através do PowerShell, para isso, execute o comando abaixo:
 
@@ -144,6 +193,7 @@ Também é possível instalar a distribuição Linux através do PowerShell, par
 wsl --list --online
 
 ```
+Atalho do comando: `wsl -l -o`
 
 Este comando lista todas as distribuições Linux disponíveis para instalação.
 
@@ -165,8 +215,14 @@ Exemplo:
 wsl --install -d Ubuntu
 
 ```
+Sugerimos o Ubuntu (sem versão) por ser uma distribuição popular e que já vem com várias ferramentas úteis para desenvolvimento instaladas por padrão.
+
 
 ## Mover ou importar a instalação do WSL2 para outro local
+
+É possível mover ou importar a instalação do WSL2 para outro local, para isso, siga os passos abaixo:
+
+### Exportando a instalação do WSL2
 
 1. Abra o PowerShell como administrador e execute o comando abaixo:
 
@@ -218,7 +274,7 @@ wsl --export Ubuntu-20.04 ubuntu.tar
   Esta extensão é utilizada para criar arquivos compactados.
 
 
-  - Ou utilizando a extenção vhd.
+  - Ou utilizando a extensão vhd.
 
   ```powershell
 
@@ -226,6 +282,8 @@ wsl --export Ubuntu-20.04 ubuntu.tar
 
   ```
   Esta extensão é utilizada para criar discos virtuais.
+
+### Importando a instalação do WSL2 
 
 1. Execute o comando abaixo para importar a instalação do WSL2 a partir de um arquivo tar:
 
@@ -239,14 +297,16 @@ wsl --import <distro_name> <install_location> <file_name>
 
     ```powershell
 
-    wsl --import Ubuntu-20.04 C:\Users\user\Documents\ubuntu.tar
+    wsl --import ubuntu C:\Users\user\Documents\ubuntu.tar
+
+    ```
 
     ```
   - Para arquivos com extensão .tar.gz, utilize o comando abaixo:
 
     ```powershell
 
-    wsl --import Ubuntu-20.04 C:\Users\user\Documents\ubuntu.tar.gz
+    wsl --import Ubuntu C:\Users\user\Documents\ubuntu.tar.gz
 
     ```
 
@@ -254,11 +314,11 @@ wsl --import <distro_name> <install_location> <file_name>
 
     ```powershell
 
-    wsl --import Ubuntu-20.04 C:\Users\user\Documents\ubuntu.vhd
+    wsl --import Ubuntu C:\Users\user\Documents\ubuntu.vhd
 
     ```
 
-1. Execute o comando abaixo para iniciar o WSL2:
+2. Execute o comando abaixo para iniciar o WSL2:
 
 ```powershell
 
@@ -266,7 +326,43 @@ wsl
 
 ```
 
-6. Execute o comando abaixo para verificar se o WSL2 foi iniciado:
+3. Execute o comando abaixo para verificar se o WSL2 foi iniciado:
+
+```powershell
+
+wsl --list --verbose
+
+```
+### Removendo uma distribuição Linux
+
+Para remover uma distribuição Linux, execute o comando abaixo:
+
+```powershell
+
+wsl --unregister <distro_name>
+
+```
+
+- Exemplo:
+
+```powershell
+
+wsl --unregister Ubuntu-20.04
+
+```
+
+- Este comando remove a distribuição Linux do WSL2, mas não remove os arquivos da distribuição Linux do disco rígido.
+- Para remover os arquivos da distribuição Linux do disco rígido, execute o comando abaixo:
+
+```powershell
+
+wsl --unregister <distro_name> --delete
+
+```
+
+Este comando remove a distribuição Linux do WSL2 e os arquivos da distribuição Linux do disco rígido.
+
+Para localizar os arquivos da distribuição Linux no disco rígido, execute o comando abaixo:
 
 ```powershell
 
@@ -274,10 +370,165 @@ wsl --list --verbose
 
 ```
 
+- Este comando lista todas as distribuições Linux instaladas no WSL2 e seus respectivos diretórios.
+
+- Para remover os arquivos da distribuição Linux do disco rígido, execute o comando abaixo:
+
+```powershell
+
+rm -rf <distro_dir>
+
+```
+
+- Exemplo:
+
+```powershell
+
+rm -rf C:\Users\user\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onWindows_79rhkp1fndgsc
+
+```
+
+- Este comando remove os arquivos da distribuição Linux do disco rígido.
+
+
+
+
+## configurando recursos do computador para o WSL 2
+
+O WSL 2 tem acesso quase que total ao recursos de sua máquina. Ele tem acesso por padrão:
+
+- A todo disco rígido.
+- A usar completamente os recursos de processamento.
+- A usar 80% da memória RAM disponível.
+- A usar 25% da memória disponível para SWAP.
+
+Podemos alterar esses valores para que o WSL 2 não use todos os recursos de sua máquina.
+
+### Alterando os recursos de uma distribuição Linux no WSL 2 através do PowerShell
+Para isso, abra o PowerShell como administrador e execute o comando abaixo:
+
+```powershell
+
+wsl --list --verbose
+
+```
+
+Este comando lista todas as distribuições Linux instaladas no WSL 2.
+
+Para alterar os recursos de uma distribuição Linux, execute o comando abaixo:
+
+```powershell
+
+wsl --set-default-resource <distro_name> <parameter> <value>
+
+```
+
+- `<distro_name>`: nome da distribuição Linux.
+- `<parameter>`: parâmetro que será alterado.
+  - `--cpu`: altera o uso de processamento.
+  - `--memory`: altera o uso de memória RAM.
+  - `--swap`: altera o uso de memória SWAP.
+
+Exemplo:
+
+```powershell
+
+wsl --set-default-resource Ubuntu --cpu 50
+
+```
+- No exemplo acima, o uso de processamento da distribuição Ubuntu foi alterado para 50%.
+
+
+### Alterando os recursos de uma distribuição Linux no WSL 2 através do arquivo .wslconfig
+
+Para alterar os recursos de uma distribuição Linux, execute o comando abaixo:
+
+```powershell
+
+notepad $env:USERPROFILE/.wslconfig
+
+```
+substitua o `notepad` pelo editor de sua preferência.
+Substitua o `USERPROFILE` pelo nome do usuário do Windows.
+
+Exemplo:
+
+```powershell
+
+code $env:rafael/.wslconfig
+
+```
+- Este comando abre o arquivo .wslconfig no bloco de notas.
+- Caso o arquivo não exista, ele será criado.
+- Caso o arquivo exista, ele será aberto no bloco de notas.
+
+Ou crie arquivo .wslconfig no diretório do usuário do Windows e adicione as configurações abaixo:
+
+```powershell
+
+[wsl2]
+
+memory=4GB # Limits VM memory in WSL 2 to 4 GB
+
+processors=2 # Makes the WSL 2 VM use two virtual processors
+
+swap=8GB # Sets the size of the swap file in WSL 2 to 8 GB
+
+localhostForwarding=true # Forward localhost to WSL 2
+
+```
+
+- `memory`: define o limite de memória RAM que o WSL 2 pode usar.
+- `processors`: define o número de processadores que o WSL 2 pode usar.
+- `swap`: define o tamanho do arquivo de troca (SWAP) que o WSL 2 pode usar.
+- `localhostForwarding`: define se o WSL 2 pode acessar o localhost do Windows.
+- `true`: habilita o acesso ao localhost do Windows.
+- `false`: desabilita o acesso ao localhost do Windows.
+- `localhost`: define o endereço IP do localhost do Windows.
+
+Exemplo:
+
+```powershell
+
+[wsl2]
+
+memory=4GB # Limits VM memory in WSL 2 to 4 GB
+
+processors=2 # Makes the WSL 2 VM use two virtual processors
+
+swap=8GB # Sets the size of the swap file in WSL 2 to 8 GB
+
+localhostForwarding=true # Forward localhost to WSL 2
+
+localhost=
+  
+  ```
+
+Após alterar o arquivo .wslconfig, salve-o e reinicie o WSL 2.
+
+Para reiniciar o WSL 2, execute o comando abaixo:
+
+```powershell
+
+wsl --shutdown
+
+```
+Este comando desliga as distribuições Linux em execução no WSL 2.
+
+Para iniciar o WSL 2, execute o comando abaixo:
+
+```powershell
+
+wsl
+
+```
+Este comando inicia o WSL 2.
+
 
 
 ## Links para guia de instalação
 
 - [Instalando o WSL](https://learn.microsoft.com/pt-br/windows/wsl/install)
 - [Instalação Manual do WSL](https://learn.microsoft.com/pt-br/windows/wsl/install-manual)
+- [WSL e Docker](https://github.com/codeedu/wsl2-docker-quickstart)
 

@@ -111,6 +111,10 @@ User user may run the following commands on DESKTOP-XXXXXX:
 
 ```
 
+Essa configuração é útil para executar comandos como administrador sem precisar digitar a senha do usuário.
+
+Esta mensagem indica que o usuário `user` pode executar qualquer comando como administrador sem precisar digitar a senha do usuário.
+
 ### Configurando usuário que wsl iniciará
 
 - Para configurar o usuário que o wsl iniciará, execute o comando abaixo:

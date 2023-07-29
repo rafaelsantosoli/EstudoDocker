@@ -47,6 +47,20 @@ echo \
   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 ```
 
+> **NOTA:** O comando acima configura o repositório estável. Para adicionar o repositório noturno ou de teste, adicione a palavra noturno ou teste (ou ambos) após a palavra estável no comando acima. Saiba mais sobre os [repositórios e ciclos de lançamento](https://docs.docker.com/engine/install/).
+
+Para verificar se a configuração está correta, execute o comando abaixo:
+
+```bash
+
+sudo apt-get update
+
+apt-cache policy docker-ce
+
+```
+
+
+
 ## Instalando o Docker Engine
 Atualize o índice de pacotes do apt
     
@@ -79,4 +93,42 @@ sudo docker run hello-world
 Este comando baixa uma imagem de teste e a executa em um container. Quando o container é executado, ele exibe uma mensagem e sai, conforme abaixo:
 ![Alt text](./Imagens/docker-hello-world.png)
 
+Caso ocorra erro: `docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock:`, execute o comando abaixo:
 
+```bash
+
+sudo usermod -aG docker $USER
+
+```
+
+> **NOTA:** Se você quiser usar o Docker como um usuário não-root, agora deve considerar adicionar seu usuário ao grupo "docker" com algo como:
+
+```bash
+
+sudo usermod -aG docker $USER
+
+```
+use o comando abaixo para verificar se o comando acima foi aplicado:
+
+```bash
+
+id -nG
+
+```
+resultado esperado:
+
+```bash
+
+usuario docker
+
+```
+
+Para aplicar as alterações, saia da sessão e faça login novamente ou execute o comando abaixo:
+
+```bash
+
+newgrp docker
+
+```
+
+> **NOTA:** Se você estiver em um ambiente corporativo, pode precisar configurar um proxy para o Docker acessar a internet. Para isso, crie o arquivo `/etc/systemd/system/docker.service.d/http-proxy.conf` com o conteúdo abaixo:
