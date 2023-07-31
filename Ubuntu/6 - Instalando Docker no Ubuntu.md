@@ -132,3 +132,16 @@ newgrp docker
 ```
 
 > **NOTA:** Se você estiver em um ambiente corporativo, pode precisar configurar um proxy para o Docker acessar a internet. Para isso, crie o arquivo `/etc/systemd/system/docker.service.d/http-proxy.conf` com o conteúdo abaixo:
+
+```bash
+
+[Service]
+
+Environment="HTTP_PROXY=http://<proxy>:<port>"
+Environment="HTTPS_PROXY=http://<proxy>:<port>"
+Environment="NO_PROXY=localhost,
+
+```
+
+
+
