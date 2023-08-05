@@ -442,8 +442,131 @@ Para instalar e aplicar, execute os comandos abaixo:
 
 ```
 
+## Instalando Asdf - Gerenciador de versões
+
+O Asdf é um gerenciador de versões que permite instalar e gerenciar versões de linguagens de programação.
+
+Exemplo de linguagens de programação que o Asdf permite instalar e gerenciar:
+
+- NodeJS.
+- NPM.
+- Yarn.
+- Python.
+- Ruby.
+- PHP.
+- etc.
 
 
+Para instalar o Asdf, execute os comandos abaixo:
 
 
+```bash
+
+git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.12.0
+
+```
+
+Verifique a versão mais recente do Asdf em: [asdf-vm.com](https://asdf-vm.com/guide/getting-started.html)
+
+```bash
+
+echo -e '\n. $HOME/.asdf/asdf.sh' >> ~/.zshrc
+
+echo -e '\n. $HOME/.asdf/completions/asdf.bash' >> ~/.zshrc
+
+```
+
+Para verificar se o Asdf foi instalado, execute o comando abaixo:
+
+```bash
+
+asdf --version
+
+```
+
+### Para usar o Asdf corretamente é preciso adicionar um plugin para cada linguagem de programação.
+
+Exemplo de plugins:
+
+- NodeJS.
+- NPM.
+- Yarn.
+- Python.
+- Ruby.
+
+Posteriormente será instalado no plugin a versão da linguagem de programação.
+
+### Definindo a versão global das linguagens de programação no Asdf
+
+Para definir a versão global das linguagens de programação no Asdf, execute os comandos abaixo:
+
+```bash
+
+asdf global <plugin> <version>
+
+```
+
+Onde:
+- `<plugin>` = Nome do plugin.
+- `<version>` = Versão da linguagem de programação.
+
+Exemplo:
+
+```bash
+
+asdf global nodejs 14.17.0
+
+```
+
+### Definindo a versão local das linguagens de programação no Asdf
+
+Para definir a versão local das linguagens de programação no Asdf, execute os comandos abaixo:
+
+```bash
+
+asdf local <plugin> <version>
+
+```
+
+Onde:
+- `<plugin>` = Nome do plugin.
+- `<version>` = Versão da linguagem de programação.
+
+### Instalando o NodeJS - JavaScript runtime
+
+Para instalar o NodeJS, execute os comandos abaixo:
+
+```bash
+
+asdf plugin-add nodejs
+
+bash ~/.asdf/plugins/nodejs/bin/import-release-team-keyring
+
+asdf install nodejs 14.17.0
+
+asdf global nodejs 14.17.0
+
+```
+
+Para verificar se o NodeJS foi instalado, execute o comando abaixo:
+
+```bash
+
+node --version
+
+```
+
+### Instalando o NPM - Gerenciador de pacotes
+
+Para instalar o NPM, execute os comandos abaixo:
+
+```bash
+
+asdf plugin-add npm
+
+asdf install npm 7.13.0
+
+asdf global npm 7.13.0
+
+```
 

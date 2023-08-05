@@ -17,7 +17,7 @@ Sumario
     - [Exportando a instalação do WSL2](#exportando-a-instalação-do-wsl2)
     - [Importando a instalação do WSL2](#importando-a-instalação-do-wsl2)
     - [Removendo uma distribuição Linux](#removendo-uma-distribuição-linux)
-  - [configurando recursos do computador para o WSL 2](#configurando-recursos-do-computador-para-o-wsl-2)
+  - [Configurando recursos do computador para o WSL 2](#configurando-recursos-do-computador-para-o-wsl-2)
     - [Alterando os recursos de uma distribuição Linux no WSL 2 através do PowerShell](#alterando-os-recursos-de-uma-distribuição-linux-no-wsl-2-através-do-powershell)
     - [Alterando os recursos de uma distribuição Linux no WSL 2 através do arquivo .wslconfig](#alterando-os-recursos-de-uma-distribuição-linux-no-wsl-2-através-do-arquivo-wslconfig)
   - [Links para guia de instalação](#links-para-guia-de-instalação)
@@ -73,7 +73,8 @@ winver
 Será exibida uma janela com a versão do Windows instalada.
 
 Exemplo:
-![Alt text](/Ubuntu/Imagens/winver.png)
+
+![Alt text](./Imagens/winver.png)
 
 
 
@@ -105,7 +106,7 @@ Abra o PowerShell como administrador e execute o comando abaixo:
 
 ```powershell
 
-$ dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 
 ```
 - Este comando habilita o recurso do WSL no Windows.
@@ -127,7 +128,7 @@ Antes de instalar o WSL 2, você precisa habilitar o recurso de máquina virtual
 
 ```powershell
 
-$ dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
 ```
 - Este comando habilita o recurso de máquina virtual no Windows.
@@ -393,7 +394,7 @@ rm -rf C:\Users\user\AppData\Local\Packages\CanonicalGroupLimited.Ubuntu20.04onW
 
 
 
-## configurando recursos do computador para o WSL 2
+## Configurando recursos do computador para o WSL 2
 
 O WSL 2 tem acesso quase que total ao recursos de sua máquina. Ele tem acesso por padrão:
 

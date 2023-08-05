@@ -15,12 +15,12 @@
         "ms-kubernetes-tools.vscode-kubernetes-tools",
         "pkief.material-icon-theme",
         "ms-ceintl.vscode-language-pack-pt-br",
-        "clarkyu.vscode-sql-beautify",
         "ms-vscode-remote.remote-wsl",
         "dotjoshjohnson.xml",
         "redhat.vscode-yaml",
         "mikestead.dotenv",
         "esbenp.prettier-vscode",
-        "yzhang.markdown-all-in-one"
+        "yzhang.markdown-all-in-one",
+        "clarkyu.vscode-sql-beautify"
     ]
 }
