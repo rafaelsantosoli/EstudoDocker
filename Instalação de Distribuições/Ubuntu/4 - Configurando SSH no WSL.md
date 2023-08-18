@@ -18,7 +18,7 @@ sudo service ssh status
 ```
 
 - O retorno deverá ser semelhante ao abaixo:
-![Alt text](/Ubuntu/Imagens/ssh_status.png)
+![Alt text](./Imagens/ssh_status.png)
 
 - Se o serviço não estiver ativo, execute o comando abaixo para ativar:
 
@@ -35,18 +35,18 @@ ssh tmoreira@localhost
 ```
 
 - Será apresentado um retorno conforme abaixo no console. Digite 'yes' e tecle enter para confirmar a conexão:
-![Alt text](/Ubuntu/Imagens/ssh_conection.png)
+![Alt text](./Imagens/ssh_conection.png)
 
 - Digite a sua senha quando solicitado. Isto irá conectá-lo à mesma sessão WSL, porém, via SSH.
-![Alt text](/Ubuntu/Imagens/ssh_password.png)
+![Alt text](./Imagens//ssh_password.png)
 
 - Verifique se o sshd está funcionando corretamente a partir da máquina host (no nosso caso, Windows). Para isso, execute o comando abaixo:
 ```bash
-ifconfig
+ipconfig
 ```
 
 - Este comando deverá retornar o ip da sua sessão da distro WSL (no nosso caso, Ubuntu-22.04), sendo o IP do exemplo '172.22.236.87':
-![Alt text](/Ubuntu/Imagens/ifconfig.png)
+![Alt text](./Imagens//ifconfig.png)
 
 
 - Através do seu terminal Windows, conecte à distro WSL usando seu endereço de IP via SSH:
@@ -56,16 +56,16 @@ ssh tmoreira@172.22.236.87
 ```
 
 - Digite 'yes' e em seguida a sua senha. O retorno deverá ser conforme abaixo:
-![Alt text](/Ubuntu/Imagens/ssh_powershell.png)
+![Alt text](./Imagens//ssh_powershell.png)
 
 
 ### Inicializando a Distro WSL na inicialização do Windows
 
 - Abra o PowerShell e clique na opção Configurações:
-![Alt text](/Ubuntu/Imagens/powershell_config.png)
+![Alt text](./Imagens//powershell_config.png)
 
 - Marque as opções conforme imagem abaixo e clique em Salvar:
-![Alt text](/Ubuntu/Imagens/powershell_config_2.png)
+![Alt text](./Imagens//powershell_config_2.png)
 
 - Com essas configurações, toda vez que o Windows inicializar, a distro WSL também será inicializada.
 
@@ -76,7 +76,7 @@ ssh tmoreira@172.22.236.87
 ```bash
 wsl -d "Ubuntu-22.04" hostname -I
 ```
-![Alt text](/Ubuntu/Imagens/wsl_ip.png)
+![Alt text](./Imagens//wsl_ip.png)
 
 - Em alguns casos, serão retornados dois IP's.No nosso caso, retornou apenas o IP '172.22.236.87'. Devemos então armazenar o ip em 2 variáveis, conforme abaixo:
 
@@ -92,7 +92,7 @@ $wsl_ipaddress1 = $wsl_ipaddress.split(" ", 2)[0]
 $wsl_ipaddress
 $wsl_ipaddress1
 ```
-![Alt text](/Ubuntu/Imagens/wsl_ip_2.png)
+![Alt text](./Imagens//wsl_ip_2.png)
 
 ### Deletando a regra de proxy de porta de rede existente e criando uma nova
 
@@ -114,7 +114,7 @@ netsh interface portproxy show v4tov4
 ```
 
 - Caso o retorno seja conforme abaixo, significa que a regra de proxy de porta de rede foi criada com sucesso:
-![Alt text](/Ubuntu/Imagens/port_proxy.png)
+![Alt text](./Imagens//port_proxy.png)
 
 ### Liberando a porta 22 no Firewall do Windows Defender
 - Por padrão, a porta 22 é bloqueada pelo firewall do Windows. Para liberar a porta 22, execute o comando abaixo:
@@ -137,13 +137,13 @@ netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=22 connect
 - Salve o arquivo com o nome 'wsl_ssh.ps1' em alguma pasta
 
 - Abra o Agendador de Tarefas do Windows e clique em 'Criar Tarefa':
-![Alt text](/Ubuntu/Imagens/agendador_tarefas.png)
+![Alt text](./Imagens//agendador_tarefas.png)
 
 - Na aba 'Geral', preencha o campo Nome com o nome que desejar, selecione 'Executar somente quando o usuário estiver conectado' e marque a opção 'Executar com privilégios mais altos':
-![Alt text](/Ubuntu/Imagens/agendador_tarefas_2.png)
+![Alt text](./Imagens//agendador_tarefas_2.png)
 
 - Na aba Disparadores, clique em 'Novo' e selecione a opção 'Ao inicializar', 'Atrasar a tarefa em' e preencha o campo com o tempo que desejar. No nosso caso, colocamos 1 minuto e selecione 'Habilitado':
-![Alt text](/Ubuntu/Imagens/agendador_tarefas_3.png)
+![Alt text](./Imagens//agendador_tarefas_3.png)
 
 - na Aba Ações clique em 'Novo' e selecione a opção 'Iniciar um programa'. No campo 'Programa/script', selecione o caminho do PowerShell.exe. No campo 'Adicione argumentos (opcional)', digite o caminho do arquivo 'wsl_ssh.ps1' que você criou no bloco de notas conforme abaixo:
 
@@ -151,7 +151,7 @@ netsh interface portproxy add v4tov4 listenaddress=0.0.0.0 listenport=22 connect
 -ExecutionPolicy Bypass -File C:\Users\thite\Documents\git\totvs\schedule\wsl_ssh.ps1
 ```
 
-![Alt text](/Ubuntu/Imagens/agendador_tarefas_4.png)
+![Alt text](./Imagens//agendador_tarefas_4.png)
 
 ### Acessando o SSH de um computador remoto
 
@@ -163,7 +163,7 @@ ssh tmoreira@192.168.1.100
 Nota: substitua 'tmoreira' e ip '192.168.1.100' de acordo com as suas configurações.
 
 - Digite 'yes' e em seguida a sua senha. O retorno deverá ser conforme abaixo:
-![Alt text](/Ubuntu/Imagens/ssh_powershell.png)
+![Alt text](./Imagens//ssh_powershell.png)
 
 - Se a sua sessão estiver dando timeout, execute o comando abaixo para testar a conectividade da rede através da porta, substituindo para o seu ip da máquina remota:
 
