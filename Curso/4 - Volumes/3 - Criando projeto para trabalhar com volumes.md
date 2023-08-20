@@ -6,7 +6,7 @@ Quando um container é removido, todos os dados que estavam dentro dele são per
 
 Para persistir dados e compartilhar arquivos entre containers, é necessário criar um volume. Um volume é um diretório que é montado dentro do container. Esse diretório é criado pelo Docker e é persistido mesmo quando o container é removido.
 
--Projeto 02_volumes
+[Projeto 02_volumes](..//Projetos%20do%20curso/02_Volumes)
 
 ## Criando um volume anonimo
 
