@@ -30,4 +30,4 @@ docker cp nginx:/etc/nginx/nginx.conf apache:/etc/apache2/apache2.conf
 
 ```
 
-![Copiando arquivos entre containers e host](/Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/docker%20cp.jpg)
+![Copiando arquivos entre containers e host](../Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/docker%20cp.jpg)

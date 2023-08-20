@@ -17,7 +17,7 @@
 
 - A imagem oficial do MySQL é a `mysql`;
 
-![mysql](/Imagens/Oficial%20Mysql.png)
+![mysql](../Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/Oficial%20Mysql.png)
 
 ## Imagens não oficiais
 
@@ -30,7 +30,7 @@
 #### Exemplo
 
 - A imagem mantida pela comunidade do MySQL é a `mysql/mysql-server`;
-![mysql-mysql-server](/Imagens/Comunidade%20Mysql.png)
+![mysql-mysql-server](../Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/Comunidade%20Mysql.png)
 
 
 ## Instalando uma imagem do apache

@@ -570,3 +570,55 @@ asdf global npm 7.13.0
 
 ```
 
+### Instalando Java - JDK
+
+Para instalar o Java, execute os comandos abaixo:
+
+```bash
+
+asdf plugin-add java
+
+asdf install java openjdk-21
+
+asdf global java openjdk-21
+
+```
+
+Para listar as versões do Java instaladas, execute o comando abaixo:
+
+```bash
+
+asdf list java
+
+```
+
+Para instalar uma versão específica do Java, execute o comando abaixo:
+
+```bash
+
+asdf install java <version>
+
+```
+
+Onde:
+- `<version>` = Versão do Java.
+- Exemplo: `asdf install java openjdk-21`
+
+Para listar todas as versões do Java disponíveis para instalação, execute o comando abaixo:
+
+```bash
+
+asdf list-all java
+
+```
+
+Para listar a versão global do Java, execute o comando abaixo:
+
+```bash
+
+asdf current java
+
+```
+
+
+

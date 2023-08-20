@@ -81,7 +81,7 @@
     $ docker push <username>/ubuntu
     ```
 
-![Enviando imagens para o Docker Hub](/Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/docker%20push%20Docker%20hub.jpg)
+![Enviando imagens para o Docker Hub](../Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/docker%20push%20Docker%20hub.jpg)
 
 ## Baixando imagens do Docker Hub
 
@@ -101,7 +101,7 @@
   $ docker pull <username>/ubuntu
   ```
 
-![Baixando imagens do Docker Hub](/Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/Docker%20Pull%20minha%20imagen.jpg)
+![Baixando imagens do Docker Hub](../Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/Docker%20Pull%20minha%20imagen.jpg)
 
 
 ## Atualizando imagens no Docker Hub

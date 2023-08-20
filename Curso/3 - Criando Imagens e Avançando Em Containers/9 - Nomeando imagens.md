@@ -32,4 +32,4 @@
 
 Obs: O comando `docker tag` é um atalho para o comando `docker image tag`.
 
-![docker_tag](/Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/Docker%20Tag.jpg)
+![docker_tag](../Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/Docker%20Tag.jpg)

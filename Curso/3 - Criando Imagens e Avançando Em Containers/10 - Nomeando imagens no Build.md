@@ -16,4 +16,4 @@ Exemplo:
 # Criando uma imagem com o nome e tag que quisermos
 docker build --tag nginx:1.0.0 .
 ```
-![docker build --tag](/Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/Docker%20build%20tag.jpg)
+![docker build --tag](../Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/Docker%20build%20tag.jpg)
