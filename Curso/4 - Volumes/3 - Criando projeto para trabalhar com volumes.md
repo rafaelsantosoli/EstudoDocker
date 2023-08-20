@@ -134,3 +134,69 @@ ls -la
 
 ```
 
+## Criando bind mounts
+
+Podemos criar bind mounts, que são volumes que são montados em um diretório do host. Para criar um bind mount, basta passar o parâmetro `-v` para o comando `docker run`:
+
+```bash
+
+docker run -d -p 80:80 --name phpmessages_container -v /home/rafael/Estudo_Docker/02_Volumes/messages:/var/www/html/messages --rm phpmessages
+
+```
+
+Explicando o comando:
+
+- `-d`: executa o container em background;
+- `-p 80:80`: mapeia a porta 80 do host para a porta 80 do container;
+- `--name phpmessages_container`: define o nome `phpmessages_container` para o container;
+- `-v /home/rafael/Estudo_Docker/02_Volumes/messages:/var/www/html/messages`: cria um bind mount, que é montado no diretório `/var/www/html/messages` do container. O diretório `/home/rafael/Estudo_Docker/02_Volumes/messages` é um diretório do host.
+- `--rm`: remove o container quando ele for finalizado;
+- `phpmessages`: imagem que será utilizada para criar o container.
+
+Ao executar o comando, o Docker irá criar um bind mount e montá-lo no diretório `/var/www/html/messages` do container. Se o diretório `/home/rafael/Estudo_Docker/02_Volumes/messages` não existir, o Docker irá criar um diretório com esse nome.
+
+Quando executado projeto, todos as mensagens enviadas pelo formulário serão salvas no diretório `/home/rafael/Estudo_Docker/02_Volumes/messages` do host.
+
+Podemos verificar que o bind mount foi criado e montado no container, acessando o terminal do container e listando o conteúdo do diretório `/var/www/html/messages`:
+
+```bash
+
+docker exec -it phpmessages_container bash
+
+cd /var/www/html/messages
+
+ls -la
+
+```
+Diretório do host:
+![Diretório do host:](..//Imagens/4%20-%20volumes/Bind%20mounts.png)
+
+Console do container:
+![Console do container:](../Imagens/4%20-%20volumes/Bind_mounts_container.png)
+
+
+Caso ocorra erro de permissão, execute o comando abaixo:
+
+```bash
+
+sudo chown -R $USER:$USER /home/rafael/Estudo_Docker/02_Volumes/messages
+sudo chmod 777  ~/Estudo_Docker/02_Volumes/messages
+
+```
+
+## Bind Mounts pode ser usado para atualizar em tempo real o projeto, sem precisar parar o container ou fazer um rebuild da imagem.
+
+Vamos criar um bind mount para o diretório raiz do projeto, que é o diretório que contém o arquivo `index.php`. Para isso, vamos executar o comando:
+
+```bash
+
+docker run -d -p 80:80 --name phpmessages_container -v /home/rafael/Estudo_Docker/02_Volumes:/var/www/html --rm phpmessages
+
+```
+
+Vamos editar o arquivo `index.php` e adicionar o texto `Bind Mount` no titulo da página.
+
+Quando acessarmos o projeto no navegador, veremos que o texto `Bind Mount` foi adicionado no titulo da página.
+
+![Alt text](../Imagens/4%20-%20volumes/Bind%20Mount%20titulo.png)
+
