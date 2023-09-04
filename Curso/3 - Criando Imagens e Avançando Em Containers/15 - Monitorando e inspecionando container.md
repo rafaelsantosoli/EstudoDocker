@@ -1,6 +1,20 @@
-# Verificar informações de processamento do container
+# Monitorando e inspecionando container
 
- - Podemos monitorar os containers em execução, para verificar o consumo de memória, processamento e outros recursos.
+Índice:
+
+- [Monitorando e inspecionando container](#monitorando-e-inspecionando-container)
+  - [Verificar informações de processamento do container](#verificar-informações-de-processamento-do-container)
+  - [Monitorar os containers](#monitorar-os-containers)
+    - [Top do container - Execução de processos](#top-do-container---execução-de-processos)
+    - [Logs do container](#logs-do-container)
+  - [Inspecionar container](#inspecionar-container)
+    - [Consultar informações do container](#consultar-informações-do-container)
+    - [Consultar informações do container - Formato filtrado](#consultar-informações-do-container---formato-filtrado)
+  - [Consultar consumo de memória do container](#consultar-consumo-de-memória-do-container)
+
+## Verificar informações de processamento do container
+
+- Podemos monitorar os containers em execução, para verificar o consumo de memória, processamento e outros recursos.
 
 - Podemos inspecionar um container em execução, para verificar as informações de processamento, memória, rede, etc.
 
@@ -77,8 +91,7 @@ O comando docker top, mostra os processos que estão sendo executados dentro do 
     - Explicando:
       - `--format=`: Formato de saída.
       - `{{.HostConfig.Memory}}`: Informação que será retornada.
-      - `<nome do container>`: Nome do container.      
-    
+      - `<nome do container>`: Nome do container.
   - Exemplo: `docker inspect --format='{{.HostConfig.Memory}}' webserver`
     - Exemplo de retorno: `running`
     - Retorna as informações do container em formato JSON.

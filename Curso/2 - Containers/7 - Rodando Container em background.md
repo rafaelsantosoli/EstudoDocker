@@ -28,7 +28,6 @@ Exemplo:
 docker inspect nginx | grep IPAddress
 ```
 
-
 ## Verificar se o container está em execução com comando `docker ps`.
 
 Podemos utilizar o `nginx` para criar um servidor web, para isso, basta executar o comando abaixo:
@@ -48,8 +47,3 @@ Para acessar o servidor web, basta acessar o ip do host e a `porta 8080`.
 
 docker stop 1234
 ```
-
-
-
-
-

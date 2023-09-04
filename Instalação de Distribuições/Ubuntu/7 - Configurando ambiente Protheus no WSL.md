@@ -1,5 +1,12 @@
 # Configurando ambiente Protheus no WSL
 
+## Índice
+
+- [Configurando ambiente Protheus no WSL](#configurando-ambiente-protheus-no-wsl)
+  - [Índice](#índice)
+  - [Smartclient](#smartclient)
+    - [Pré-requisitos](#pré-requisitos)
+
 ## Smartclient
 
 ### Pré-requisitos

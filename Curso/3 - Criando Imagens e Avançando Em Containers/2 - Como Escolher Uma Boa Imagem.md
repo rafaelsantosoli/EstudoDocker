@@ -13,7 +13,7 @@
 
 - As imagens oficiais são identificadas pelo nome do repositório, que é o nome do software;
 
-#### Exemplo
+Exemplo
 
 - A imagem oficial do MySQL é a `mysql`;
 
@@ -27,11 +27,10 @@
 
 - As imagens mantidas pela comunidade são identificadas pelo nome do repositório, que é o nome do software, seguido do nome do mantenedor;
 
-#### Exemplo
+Exemplo
 
 - A imagem mantida pela comunidade do MySQL é a `mysql/mysql-server`;
 ![mysql-mysql-server](../Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/Comunidade%20Mysql.png)
-
 
 ## Instalando uma imagem do apache
 
@@ -39,10 +38,11 @@ Documentação da Imagem: [httpd - The Apache HTTP Server Project](https://hub.d
 
 Comando para executar container do apache:
 
-````
+````Bash
 docker run -d -p 8080:80 --name meu_apache httpd
 ````
-### Explicação do comando:
+
+Explicação do comando acima:
 
 -d = detach (desacoplar) - Roda o container em background (segundo plano) e retorna o ID do container criado.
 -p = publish (publicar) - Publica uma porta do container para o host. No exemplo acima, a porta 80 do container foi publicada na porta 8080 do host.

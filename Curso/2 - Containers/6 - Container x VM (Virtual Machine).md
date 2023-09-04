@@ -1,14 +1,23 @@
 # Container x VM (Virtual Machine)
 
+Índice:
+
+- [Container x VM (Virtual Machine)](#container-x-vm-virtual-machine)
+- [O que é um Container?](#o-que-é-um-container)
+  - [O que é uma VM?](#o-que-é-uma-vm)
+  - [Docker vs Máquinas Virtuais frente a frente](#docker-vs-máquinas-virtuais-frente-a-frente)
+  - [Vantagens do Container](#vantagens-do-container)
+  - [Vantagens da VM](#vantagens-da-vm)
+  - [Conclusão](#conclusão)
+  - [Referências](#referências)
+
 # O que é um Container?
 
 - Container é uma aplicação que serve para um determinado fim, não possui sistema operacional, seu tamanho é de alguns megabytes, e é executado em cima de um sistema operacional, que pode ser Linux ou Windows.
 
-
 ## O que é uma VM?
 
 - VM é uma máquina virtual, que possui um sistema operacional, e pode ser executado em cima de um sistema operacional, que pode ser Linux ou Windows.
-
 
 ## Docker vs Máquinas Virtuais frente a frente
 
@@ -34,10 +43,6 @@
 |Virtualiza o sistema operacional | Virtualiza o hardware |
 |Compartilha sistema operacional | Não compartilha sistema operacional |
 
-
-
-
-
 ## Vantagens do Container
 
 - Container é mais leve que uma VM, pois não possui um sistema operacional, e sim uma aplicação que serve para um determinado fim.
@@ -60,7 +65,6 @@
 
 ## Vantagens da VM
 
-
 - VM é mais escalável que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
 
 - VM é mais portável que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
@@ -71,15 +75,12 @@
 
 - VM é mais fácil de manter que um container, pois possui um sistema operacional, e uma aplicação que serve para um determinado fim.
 
-
 ## Conclusão
 
 - Container é mais leve, rápido, seguro, barato, escalável, portável, flexível, fácil de gerenciar e manter que uma VM.
 
 - VM é mais escalável, portável, flexível, fácil de gerenciar e manter que um container.
 
-
 ## Referências
-
 
 [Docker vs VM](https://medium.com/@atiladelcanton/docker-vs-virtual-machines-34dc8729f391)

@@ -36,6 +36,3 @@ docker exec -it 7b bash
 
 docker exec -it 7b ls -l
 ```
-
-
-

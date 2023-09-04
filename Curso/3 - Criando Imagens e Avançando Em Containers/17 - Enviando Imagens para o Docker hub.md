@@ -3,6 +3,17 @@
 - Para enviarmos uma imagem para Docker Hub, é necessário que a imagem esteja no formato `<username>/<image>:<version>`.
 - É necessário criar um repositório no Docker Hub antes de enviar a imagem.  
 - Vamos utilizar o comando `docker push` para enviar a imagem para o Docker Hub.  
+- Vamos utilizar o comando `docker pull` para baixar a imagem do Docker Hub.
+
+Índice:
+
+- [Enviando imagens para o Docker Hub](#enviando-imagens-para-o-docker-hub)
+  - [Login no Docker Hub](#login-no-docker-hub)
+  - [Criando repositórios no Docker Hub](#criando-repositórios-no-docker-hub)
+  - [Enviando imagens para o Docker Hub](#enviando-imagens-para-o-docker-hub-1)
+  - [Atualizando imagens no Docker Hub](#atualizando-imagens-no-docker-hub)
+  - [Excluindo imagens do Docker Hub](#excluindo-imagens-do-docker-hub)
+  - [Excluindo repositórios do Docker Hub](#excluindo-repositórios-do-docker-hub)
 
 ## Login no Docker Hub
 
@@ -50,8 +61,6 @@
   - Cada usuário pode criar um repositório público gratuito.
   - Cada usuário pode criar um repositório privado gratuito.
 
-
-
 ## Enviando imagens para o Docker Hub
 
 - Para enviar imagens para o Docker Hub, é necessário criar uma tag para a imagem.
@@ -66,7 +75,7 @@
 
   - Se for informado, será enviado a tag informada.
 
-### Exemplo
+Exemplo
 
 - Criando uma tag para a imagem `ubuntu`:
 
@@ -93,7 +102,7 @@
 
   - Se for informado, será baixada a tag informada.
 
-### Exemplo
+Exemplo
 
 - Baixando a imagem `ubuntu` do Docker Hub:
 
@@ -102,7 +111,6 @@
   ```
 
 ![Baixando imagens do Docker Hub](../Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/Docker%20Pull%20minha%20imagen.jpg)
-
 
 ## Atualizando imagens no Docker Hub
 
@@ -131,7 +139,7 @@
 
   - Se for informado, será excluída a tag informada.
 
-### Exemplo
+Exemplo
 
 - Excluindo a imagem `ubuntu` do Docker Hub:
 

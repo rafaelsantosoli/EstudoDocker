@@ -10,11 +10,11 @@
 
 A linguagem usada para escrever o Dockerfile é bem simples, e é composta por uma série de instruções, que são executadas sequencialmente, e cada instrução cria uma nova camada na imagem.
 
-
 ### Instruções
 
-- A primeira instrução que vamos usar é a `FROM`, que define qual imagem vamos usar como base para a nossa imagem.  
-- 
+- A primeira instrução que vamos usar é a `FROM`, que define qual imagem vamos usar como base para a nossa imagem.
+- Neste caso vamos usar a imagem do node na versão 12. 
+
 ```dockerfile
 FROM node:12
 ```

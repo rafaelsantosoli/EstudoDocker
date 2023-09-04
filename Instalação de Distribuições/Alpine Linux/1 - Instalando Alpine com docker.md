@@ -1,6 +1,24 @@
 
 # Instalando e configurando Linux Alpine com docker
 
+## Índice
+
+- [Instalando e configurando Linux Alpine com docker](#instalando-e-configurando-linux-alpine-com-docker)
+  - [Índice](#índice)
+  - [Configurando WSL2 para rodar Alpine Linux.](#configurando-wsl2-para-rodar-alpine-linux)
+  - [Instalando Linux Alpine](#instalando-linux-alpine)
+  - [Exibindo informações sobre o sistema operacional.](#exibindo-informações-sobre-o-sistema-operacional)
+  - [Configurando Alpine Linux](#configurando-alpine-linux)
+  - [Instalando Docker](#instalando-docker)
+  - [Instalando Docker Compose](#instalando-docker-compose)
+  - [Erros e Soluções](#erros-e-soluções)
+    - [Erro: "ash: service: not found"](#erro-ash-service-not-found)
+    - [Erro: "docker: Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock"](#erro-docker-got-permission-denied-while-trying-to-connect-to-the-docker-daemon-socket-at-unixvarrundockersock)
+    - [Erro: "docker: Cannot connect to the Docker daemon at tcp://localhost:2375. Is the docker daemon running?"](#erro-docker-cannot-connect-to-the-docker-daemon-at-tcplocalhost2375-is-the-docker-daemon-running)
+    - [Erro: "docker: Error response from daemon: Conflict. The container name "/alpine" is already in use by container"](#erro-docker-error-response-from-daemon-conflict-the-container-name-alpine-is-already-in-use-by-container)
+    - [Erro: "connot connect to the Docker daemon at unix:///var/run/docker.sock. Is the docker daemon running?"](#erro-connot-connect-to-the-docker-daemon-at-unixvarrundockersock-is-the-docker-daemon-running)
+    - [Erro: "-ash: sudo: not found"](#erro--ash-sudo-not-found)
+
 ## Configurando WSL2 para rodar Alpine Linux.
 
 Verifique se o WSL2 está instalado e configurado corretamente.

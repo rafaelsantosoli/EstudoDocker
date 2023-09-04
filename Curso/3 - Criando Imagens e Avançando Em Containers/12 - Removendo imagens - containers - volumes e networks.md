@@ -1,5 +1,24 @@
 # Removendo imagens, containers, volumes e networks
 
+Índice:
+
+- [Removendo imagens, containers, volumes e networks](#removendo-imagens-containers-volumes-e-networks)
+  - [Removendo tudo com um único comando](#removendo-tudo-com-um-único-comando)
+  - [Removendo imagens](#removendo-imagens)
+  - [Removendo containers](#removendo-containers)
+  - [Removendo imagens e containers](#removendo-imagens-e-containers)
+  - [Removendo todas as imagens e containers](#removendo-todas-as-imagens-e-containers)
+  - [Removendo todas as imagens e containers que não estão em uso](#removendo-todas-as-imagens-e-containers-que-não-estão-em-uso)
+  - [Removendo volumes](#removendo-volumes)
+  - [Removendo todos os volumes](#removendo-todos-os-volumes)
+  - [Removendo networks](#removendo-networks)
+  - [Removendo todas as networks](#removendo-todas-as-networks)
+  - [Remover todas as imagens, todos os containers, todos os volumes e todas as networks](#remover-todas-as-imagens-todos-os-containers-todos-os-volumes-e-todas-as-networks)
+- [Removendo todas as imagens, todos os containers, todos os volumes e todas as networks](#removendo-todas-as-imagens-todos-os-containers-todos-os-volumes-e-todas-as-networks)
+
+
+## Removendo tudo com um único comando
+
 - Para remover tudo com um único comando, basta executar o comando `docker system prune -a`, o comando `docker system prune -a` remove todas as imagens, todos os containers, todos os volumes e todas as networks.
   - A flag `-a` remove todas as imagens, todos os containers, todos os volumes e todas as networks.
   - A flag `-f` força a remoção de todos os containers, todas as imagens, todos os volumes e todas as networks.
@@ -14,7 +33,7 @@
 - Para remover todas as imagens que não estão em uso, basta executar o comando `docker rmi $(docker images -q -f dangling=true)` ou `docker image prune -a`, o comando `docker image prune -a` remove todas as imagens que não estão em uso. 
   - A flag `-a` remove todas as imagens que não estão em uso, a flag `-f` força a remoção da imagem.
 
-### Exemplos
+Exemplos
 
 ```sh
 
@@ -43,6 +62,7 @@ docker rmi $(docker images -q -f dangling=true)
 docker image prune -a
 
 ```
+
 ## Removendo containers
 
 - Para remover um container, basta executar o comando `docker rm <nome do container>` ou `docker rm <id do container>`
@@ -52,7 +72,7 @@ docker image prune -a
 - Para remover todos os containers que não estão em execução, basta executar o comando `docker rm $(docker ps -aq -f status=exited)` ou `docker container prune`, o comando `docker container prune` remove todos os containers que não estão em execução.
   - A flag `-f` força a remoção do container, a flag `-q` retorna apenas os ids dos containers, a flag `-a` retorna todos os containers, a flag `-q` retorna apenas os ids dos containers, a flag `-f` força a remoção do container.
 
-### Exemplos
+Exemplos
 
 ```sh
 
@@ -82,12 +102,11 @@ docker container prune
 
 ```
 
-
 ## Removendo imagens e containers
 
 - Para remover uma imagem e um container, basta executar o comando `docker rmi <nome da imagem> && docker rm <nome do container>` ou `docker rmi <id da imagem> && docker rm <id do container>`
 
-### Exemplos
+Exemplos
 
 ```sh
 
@@ -101,7 +120,7 @@ docker rmi nginx && docker rm nginx
 
 - Para remover todas as imagens e todos os containers, basta executar o comando `docker rmi $(docker images -q) && docker rm $(docker ps -aq)` ou `docker rmi -f $(docker images -q) && docker rm -f $(docker ps -aq)`
 
-### Exemplos
+Exemplos
 
 ```sh
 
@@ -120,8 +139,7 @@ docker rmi -f $(docker images -q) && docker rm -f $(docker ps -aq)
 
 - Para remover todas as imagens e todos os containers que não estão em uso, basta executar o comando `docker rmi $(docker images -q -f dangling=true) && docker rm $(docker ps -aq -f status=exited)` ou `docker rmi -f $(docker images -q -f dangling=true) && docker rm -f $(docker ps -aq -f status=exited)`
 
-
-### Exemplos
+Exemplos
 
 ```sh
 
@@ -139,7 +157,7 @@ docker rmi -f $(docker images -q -f dangling=true) && docker rm -f $(docker ps -
 
 - Para remover um volume, basta executar o comando `docker volume rm <nome do volume>` ou `docker volume rm <id do volume>`
 
-### Exemplos
+Exemplos
 
 ```sh
 
@@ -153,7 +171,7 @@ docker volume rm nginx
 
 - Para remover todos os volumes, basta executar o comando `docker volume rm $(docker volume ls -q)` ou `docker volume prune`
 
-### Exemplos
+Exemplos
 
 ```sh
 
@@ -171,7 +189,7 @@ docker volume prune
 
 - Para remover uma network, basta executar o comando `docker network rm <nome da network>` ou `docker network rm <id da network>`
 
-### Exemplos
+Exemplos
 
 ```sh
 
@@ -185,7 +203,7 @@ docker network rm nginx
 
 - Para remover todas as networks, basta executar o comando `docker network rm $(docker network ls -q)` ou `docker network prune`
 
-### Exemplos
+Exemplos
 
 ```sh
 
@@ -199,11 +217,11 @@ docker network prune
 
 ```
 
-## Removendo imagens, containers, volumes e networks
+## Remover todas as imagens, todos os containers, todos os volumes e todas as networks
 
 - Para remover todas as imagens, todos os containers, todos os volumes e todas as networks, basta executar o comando `docker rmi $(docker images -q) && docker rm $(docker ps -aq) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q)` ou `docker rmi -f $(docker images -q) && docker rm -f $(docker ps -aq) && docker volume rm $(docker volume ls -q) && docker network rm $(docker network ls -q)` ou `docker system prune -a`
 
-### Exemplos
+Exemplos
 
 ```sh
 

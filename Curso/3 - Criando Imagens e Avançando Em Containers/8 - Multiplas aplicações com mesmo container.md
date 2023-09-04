@@ -46,4 +46,3 @@ Para acessar a aplicação do `nginx3` vamos acessar a porta `8082`:
 
 curl localhost:8082
 ```
-

@@ -1,5 +1,35 @@
 # Configuração e personalização
 
+Índice:
+
+- [Configuração e personalização](#configuração-e-personalização)
+  - [Configuração do Ubuntu - WSL2](#configuração-do-ubuntu---wsl2)
+    - [Configuração do usuário - Ubuntu](#configuração-do-usuário---ubuntu)
+    - [Para identificar o nome do usuário, execute o comando abaixo:](#para-identificar-o-nome-do-usuário-execute-o-comando-abaixo)
+    - [Para evitar que o Ubuntu solicite a senha do usuário, execute o comando abaixo:](#para-evitar-que-o-ubuntu-solicite-a-senha-do-usuário-execute-o-comando-abaixo)
+    - [Configurando usuário que wsl iniciará](#configurando-usuário-que-wsl-iniciará)
+    - [Configuração do teclado - Ubuntu](#configuração-do-teclado---ubuntu)
+    - [Configuração do idioma - Ubuntu](#configuração-do-idioma---ubuntu)
+  - [Instalando o Ansible - Gerenciador de configuração](#instalando-o-ansible---gerenciador-de-configuração)
+  - [Instalando Git - Controle de versão](#instalando-git---controle-de-versão)
+  - [Instalando Vim - Editor de texto](#instalando-vim---editor-de-texto)
+    - [Instalando o Vim - Editor de texto](#instalando-o-vim---editor-de-texto)
+  - [Instalando neovim - Editor de texto](#instalando-neovim---editor-de-texto)
+    - [Instalando o neovim - Editor de texto](#instalando-o-neovim---editor-de-texto)
+  - [Personalização do terminal - Shell](#personalização-do-terminal---shell)
+    - [Instalando o Oh My Zsh - Framework para o Zsh](#instalando-o-oh-my-zsh---framework-para-o-zsh)
+    - [Instalando o Zsh - Shell](#instalando-o-zsh---shell)
+    - [Definindo o Zsh como shell padrão](#definindo-o-zsh-como-shell-padrão)
+    - [Personalizando o terminal - Oh My Zsh com Powerlevel10k](#personalizando-o-terminal---oh-my-zsh-com-powerlevel10k)
+  - [Instalando Asdf - Gerenciador de versões](#instalando-asdf---gerenciador-de-versões)
+    - [Adicionando plugins no Asdf](#adicionando-plugins-no-asdf)
+    - [Definindo a versão global das linguagens de programação no Asdf](#definindo-a-versão-global-das-linguagens-de-programação-no-asdf)
+    - [Definindo a versão local das linguagens de programação no Asdf](#definindo-a-versão-local-das-linguagens-de-programação-no-asdf)
+    - [Instalando o NodeJS - JavaScript runtime](#instalando-o-nodejs---javascript-runtime)
+    - [Instalando o NPM - Gerenciador de pacotes](#instalando-o-npm---gerenciador-de-pacotes)
+    - [Instalando JDK do Java](#instalando-jdk-do-java)
+
+
 ## Configuração do Ubuntu - WSL2
 
 ### Configuração do usuário - Ubuntu
@@ -335,7 +365,7 @@ Vantagens do Oh My Zsh:
 - Gerenciamento de plugins.
 - Gerenciamento avançado de histórico de comandos.
 
-## Instalando o Zsh - Shell
+### Instalando o Zsh - Shell
 
 [Instalando o Z Shell (ZSH) no Ubuntu 20.04](https://medium.com/@gutoinfo.ribeiro/instalando-e-configurando-o-zsh-no-ubuntu-20-04-4ef8a2499ed5)
 
@@ -364,7 +394,7 @@ zsh 5.8 (x86_64-ubuntu-linux-gnu)
 
 ```
 
-## Definindo o Zsh como shell padrão
+### Definindo o Zsh como shell padrão
 
 Para definir o Zsh como shell padrão, execute o comando abaixo:
 
@@ -400,8 +430,6 @@ chsh -s /usr/bin/zsh
 
 ```
 
-
-
 Explicando o comando acima:
 
 - `sudo`: Executa o comando como administrador.
@@ -424,7 +452,6 @@ As opções são:
 Digite `2` e pressione `Enter`.
 
 Será exibido o menu do Oh My Zsh.
-
 
 ### Personalizando o terminal - Oh My Zsh com Powerlevel10k
 
@@ -484,7 +511,9 @@ asdf --version
 
 ```
 
-### Para usar o Asdf corretamente é preciso adicionar um plugin para cada linguagem de programação.
+### Adicionando plugins no Asdf
+
+Para usar o Asdf corretamente é preciso adicionar um plugin para cada linguagem de programação
 
 Exemplo de plugins:
 
@@ -570,7 +599,7 @@ asdf global npm 7.13.0
 
 ```
 
-### Instalando Java - JDK
+### Instalando JDK do Java
 
 Para instalar o Java, execute os comandos abaixo:
 
@@ -619,6 +648,3 @@ Para listar a versão global do Java, execute o comando abaixo:
 asdf current java
 
 ```
-
-
-

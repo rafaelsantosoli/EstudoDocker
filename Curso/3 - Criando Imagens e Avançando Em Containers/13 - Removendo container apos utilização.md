@@ -12,6 +12,7 @@
   - Quando a execução do container for finalizada, o container será deletado
 
 Exemplo de execução:
+
 ```sh
 $ docker run --rm -it ubuntu
 root@e3b4c2d3f4a5:/# exit
@@ -22,6 +23,7 @@ CONTAINER ID        IMAGE               COMMAND             CREATED             
 ```
 
 Quando executado container em background, o container será deletado após sua finalização
+
 ```sh
 $ docker run --rm -d -p 8080:80 nginx
 

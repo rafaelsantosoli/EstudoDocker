@@ -1,5 +1,12 @@
 # Instalando Git no Ubuntu
 
+## Índice
+
+- [Instalando Git no Ubuntu](#instalando-git-no-ubuntu)
+  - [Índice](#índice)
+  - [Configurações iniciais](#configurações-iniciais)
+  - [Configurando o Git](#configurando-o-git)
+
 ## Configurações iniciais
 - Antes de instalar o Git, é necessário atualizar os pacotes do sistema. Para isso, execute o comando abaixo:
 

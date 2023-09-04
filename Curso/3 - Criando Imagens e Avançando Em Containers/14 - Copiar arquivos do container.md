@@ -2,7 +2,7 @@
 
 - Para cópia de arquivos entre containers e o host, basta utilizar o comando `docker cp <nome do container>:<caminho do arquivo> <caminho do arquivo>` ou `docker cp <caminho do arquivo> <nome do container>:<caminho do arquivo>`
 
-### Exemplos
+Exemplos
 
 ```sh
 
@@ -20,7 +20,7 @@ docker cp nginx.conf nginx:/etc/nginx/nginx.conf
 
 - Para copiar arquivos entre containers, basta utilizar o comando `docker cp <nome do container>:<caminho do arquivo> <nome do container>:<caminho do arquivo>`
 
-### Exemplo
+Exemplo
 
 ```sh
 

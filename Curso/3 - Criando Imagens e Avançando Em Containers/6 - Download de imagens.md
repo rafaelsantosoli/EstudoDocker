@@ -24,4 +24,3 @@ docker images
 ```
 
 ![docker pull](../Imagens/3%20-%20Criando%20Imagens%20e%20Avançando%20Em%20Containers/imagem%20Python.jpg)
-

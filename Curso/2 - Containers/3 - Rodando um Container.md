@@ -1,3 +1,15 @@
+Indice:
+
+- [Onde encontrar imagens?](#onde-encontrar-imagens)
+  - [Como utilizar imagens?](#como-utilizar-imagens)
+    - [Diferença entre executar uma imagem de forma interativa e em background](#diferença-entre-executar-uma-imagem-de-forma-interativa-e-em-background)
+    - [Diferença entre executar uma imagem de forma interativa e em background e com acesso ao terminal](#diferença-entre-executar-uma-imagem-de-forma-interativa-e-em-background-e-com-acesso-ao-terminal)
+  - [Comandos para executar imagens de forma interativa e em background e com acesso ao terminal](#comandos-para-executar-imagens-de-forma-interativa-e-em-background-e-com-acesso-ao-terminal)
+  - [Listando imagens](#listando-imagens)
+  - [Removendo imagens](#removendo-imagens)
+  - [listando container](#listando-container)
+  - [Removendo containers](#removendo-containers)
+
 # Onde encontrar imagens?
 
 - Vamos encontrar imagens no [Docker Hub](https://hub.docker.com/)

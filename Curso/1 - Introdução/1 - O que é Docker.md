@@ -1,3 +1,21 @@
+# Docker
+
+Índice:
+
+- [Docker](#docker)
+  - [1. O que é Docker?](#1-o-que-é-docker)
+  - [2. O que é um contêiner?](#2-o-que-é-um-contêiner)
+  - [3. O que é uma imagem?](#3-o-que-é-uma-imagem)
+  - [4. O que é um registro?](#4-o-que-é-um-registro)
+  - [5. O que é Dockerfile?](#5-o-que-é-dockerfile)
+  - [6. O que é Docker Compose?](#6-o-que-é-docker-compose)
+  - [7. O que é Docker Swarm?](#7-o-que-é-docker-swarm)
+  - [8. O que é Docker Engine?](#8-o-que-é-docker-engine)
+  - [9. O que é Docker Hub?](#9-o-que-é-docker-hub)
+  - [10. O que é Docker Daemon?](#10-o-que-é-docker-daemon)
+  - [11. O que é Docker Client?](#11-o-que-é-docker-client)
+  - [12. O que é Docker Machine?](#12-o-que-é-docker-machine)
+
 ## 1. O que é Docker?
 
 Docker é uma plataforma de software que permite criar, testar e implantar aplicativos rapidamente. O Docker empacota software em unidades padronizadas chamadas contêineres que incluem tudo o que o software precisa para ser executado, incluindo bibliotecas, ferramentas de sistema, código e tempo de execução. Usando o Docker, você pode implantar e dimensionar rapidamente aplicativos em qualquer ambiente e ter a certeza de que seu código será executado.

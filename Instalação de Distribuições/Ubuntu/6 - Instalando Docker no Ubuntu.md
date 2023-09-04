@@ -1,6 +1,16 @@
 # Instalando Docker no Ubuntu
 
+## Índice
+
+- [Instalando Docker no Ubuntu](#instalando-docker-no-ubuntu)
+  - [Índice](#índice)
+  - [Pré-Requisitos](#pré-requisitos)
+  - [Instalando o Docker Engine](#instalando-o-docker-engine)
+    - [1) Latest Version](#1-latest-version)
+    - [ou 2) Specific Version](#ou-2-specific-version)
+
 ## Pré-Requisitos
+
 Antes de tudo, atualize sua lista existente de pacotes:
 
 ```bash
@@ -59,11 +69,9 @@ apt-cache policy docker-ce
 
 ```
 
-
-
 ## Instalando o Docker Engine
+
 Atualize o índice de pacotes do apt
-    
 ```bash
 sudo apt-get update
 ```

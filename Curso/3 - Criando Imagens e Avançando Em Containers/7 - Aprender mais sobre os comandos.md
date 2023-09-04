@@ -7,6 +7,7 @@
 - Para relembrar algo ou executar uma tarefa diferente com o mesmo comando, podemos utilizar o comando `history` para ver o histórico de comandos executados no terminal.
 
 ## --help
+
 Exemplo:
 
 ```bash
@@ -14,9 +15,11 @@ Exemplo:
 docker run --help
 
 ```
+
 Resultado:
 
-```
+```Bash
+
 Usage:  docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 
 Create and run a new container from an image
@@ -133,20 +136,19 @@ Options:
 
 ```
 
-
-
-
 ## Command History
 
-```bash 
+```bash
 
 history
 
 ```
+
 Resultado:
 
 The following is a list of commands executed in a Docker environment:
-```
+
+```bash
 > history
     1  docker pull python
     2  docker run -it python

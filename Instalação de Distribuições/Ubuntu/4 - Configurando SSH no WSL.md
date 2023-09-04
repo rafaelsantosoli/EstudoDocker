@@ -1,5 +1,20 @@
 # Configurando SSH no WSL
 
+Índice:
+
+- [Configurando SSH no WSL](#configurando-ssh-no-wsl)
+  - [Configurações iniciais](#configurações-iniciais)
+    - [Pré-Requisitos](#pré-requisitos)
+    - [Utilizando o sshd](#utilizando-o-sshd)
+    - [Inicializando a Distro WSL na inicialização do Windows](#inicializando-a-distro-wsl-na-inicialização-do-windows)
+    - [Pegando o IP da sessão da distro WSL no Windows](#pegando-o-ip-da-sessão-da-distro-wsl-no-windows)
+    - [Deletando a regra de proxy de porta de rede existente e criando uma nova](#deletando-a-regra-de-proxy-de-porta-de-rede-existente-e-criando-uma-nova)
+      - [A informação a seguir foi providenciada por Scott Hanselman no seu blog 'How to SSH into WSL2 on Windows 10 from an external machine'](#a-informação-a-seguir-foi-providenciada-por-scott-hanselman-no-seu-blog-how-to-ssh-into-wsl2-on-windows-10-from-an-external-machine)
+    - [Liberando a porta 22 no Firewall do Windows Defender](#liberando-a-porta-22-no-firewall-do-windows-defender)
+    - [Automatizando o script usando Agendador de Tarefas do Windows](#automatizando-o-script-usando-agendador-de-tarefas-do-windows)
+    - [Acessando o SSH de um computador remoto](#acessando-o-ssh-de-um-computador-remoto)
+    - [Fontes:](#fontes)
+
 ## Configurações iniciais
 
 ### Pré-Requisitos
