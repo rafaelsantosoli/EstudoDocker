@@ -1,0 +1,73 @@
+HTTP/1.1 200 OK
+Server: Werkzeug/2.3.7 Python/3.11.5
+Date: Mon, 04 Sep 2023 15:24:49 GMT
+Content-Type: application/json
+Content-Length: 1727
+Connection: close
+
+{
+  "info": {
+    "page": 1,
+    "results": 1,
+    "seed": "5fdb4bc0b164373b",
+    "version": "1.4"
+  },
+  "results": [
+    {
+      "cell": "(246) 782-0766",
+      "dob": {
+        "age": 66,
+        "date": "1956-09-20T01:01:51.893Z"
+      },
+      "email": "barry.walker@example.com",
+      "gender": "male",
+      "id": {
+        "name": "SSN",
+        "value": "213-83-3348"
+      },
+      "location": {
+        "city": "Virginia Beach",
+        "coordinates": {
+          "latitude": "87.1903",
+          "longitude": "-92.9442"
+        },
+        "country": "United States",
+        "postcode": 55245,
+        "state": "Washington",
+        "street": {
+          "name": "Poplar Dr",
+          "number": 8217
+        },
+        "timezone": {
+          "description": "Brazil, Buenos Aires, Georgetown",
+          "offset": "-3:00"
+        }
+      },
+      "login": {
+        "md5": "e04a28744013953eb61594e52cea17e7",
+        "password": "slapshot",
+        "salt": "8raStMXC",
+        "sha1": "0297c663e3ae5dc59b470f14b8dbe22ff76c3ca9",
+        "sha256": "bcd352c015fadce79c9bdc3a52bca86e79fb246bd72ba6da1d148a58136d8601",
+        "username": "ticklishswan788",
+        "uuid": "1e5dafe8-f40b-459c-bddd-c3a1ca23770d"
+      },
+      "name": {
+        "first": "Barry",
+        "last": "Walker",
+        "title": "Mr"
+      },
+      "nat": "US",
+      "phone": "(861) 344-0871",
+      "picture": {
+        "large": "https://randomuser.me/api/portraits/men/7.jpg",
+        "medium": "https://randomuser.me/api/portraits/med/men/7.jpg",
+        "thumbnail": "https://randomuser.me/api/portraits/thumb/men/7.jpg"
+      },
+      "registered": {
+        "age": 7,
+        "date": "2016-01-08T20:58:12.295Z"
+      }
+    }
+  ]
+}
