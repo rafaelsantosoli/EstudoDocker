@@ -1,0 +1,141 @@
+nome: Rafael
+idade: 25
+
+# Este objeto descreve nosso projeto
+objeto:
+  versao: 2
+  arquivo: test.yaml
+
+# Dados textuais (string)
+
+# Texto simples
+
+texto_simples: Este é um texto simples
+
+# Texto com quebra de linha
+
+texto_com_quebra: |
+  Este é um texto
+  com quebra de linha
+
+# Texto com quebra de linha e tabulação
+
+texto_com_quebra_e_tab: |
+  Este é um texto
+  com quebra de linha
+  e tabulação
+
+# Texto com quebra de linha e tabulação ignorando a primeira linha
+
+texto_com_quebra_e_tab_sem_primeira_linha: |-
+  Este é um texto
+  com quebra de linha
+  e tabulação
+
+# Texto com quebra de linha e tabulação ignorando a primeira e a última linha
+
+texto_com_quebra_e_tab_sem_primeira_e_ultima_linha: >-
+  Este é um texto
+  com quebra de linha
+  e tabulação
+
+# Texto com quebra de linha e tabulação ignorando a primeira e a última linha e com quebra de linha no final
+
+texto_com_quebra_e_tab_sem_primeira_e_ultima_linha_com_quebra_de_linha_no_final: >-
+  Este é um texto
+  com quebra de linha
+  e tabulação
+
+
+# Dados numéricos
+
+# Número inteiro
+numero: 10
+
+# Número decimal
+
+numero_decimal: 10.5
+
+# Booleano
+
+booleanoTrue: true
+booleanoFalse: false
+booleanoOn: on
+booleanoOff: off
+
+
+# Sequência
+
+sequencia:
+  - item1
+  - item2
+  - item3
+
+# Dicionário
+
+dicionario:
+  chave1: valor1
+  chave2: valor2
+  chave3: valor3
+
+dicionario2: {chave1: valor1, chave2: valor2, chave3: valor3}
+
+# Dicionário com lista
+
+dicionario_com_lista:
+  - chave1: valor1
+  - chave2: valor2
+  - chave3: valor3
+
+# Lista
+
+lista:
+  - item1
+  - item2
+  - item3
+
+lista2: [item1, item2, item3]
+
+# Objeto
+
+objeto1:
+  chave1: valor1
+  chave2: valor2
+  chave3: valor3
+
+objeto2: {chave1: valor1, chave2: valor2, chave3: valor3}
+
+
+
+# Dicionário com objetos
+
+dicionario_com_objetos:
+  chave1:
+    chave2: valor2
+    chave3: valor3
+  chave4:
+    chave5: valor5
+    chave6: valor6
+
+# Lista com objetos
+
+lista_com_objetos:
+  - chave1: valor1
+    chave2: valor2
+  - chave3: valor3
+    chave4: valor4
+
+# Lista com objetos e quebra de linha
+
+lista_com_objetos_e_quebra_de_linha:
+  - chave1: valor1
+    chave2: valor2
+
+  - chave3: valor3
+    chave4: valor4
+
+
+
+
+
+

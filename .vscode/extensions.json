@@ -21,6 +21,8 @@
         "mikestead.dotenv",
         "esbenp.prettier-vscode",
         "yzhang.markdown-all-in-one",
-        "clarkyu.vscode-sql-beautify"
+        "clarkyu.vscode-sql-beautify",
+        "docsmsft.docs-yaml",
+        "bierner.markdown-yaml-preamble"
     ]
 }
