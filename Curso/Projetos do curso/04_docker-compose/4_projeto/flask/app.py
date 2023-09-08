@@ -4,13 +4,13 @@ import requests
 import flask_mysqldb
 from flask_mysqldb import MySQL
 
-app = flask.Flask(__name__)
-app.config["DEBUG"] = True
+app = flask.Flask(__name__) # Instância da classe Flask
+app.config["DEBUG"] = True # Debugar a aplicação
 
-app.config['MYSQL_HOST'] = 'mysql_api_container'
-app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = ''
-app.config['MYSQL_DB'] = 'flaskdocker'
+app.config['MYSQL_HOST'] = 'db' # Nome do container
+app.config['MYSQL_USER'] = 'root' # Usuário do MySQL
+app.config['MYSQL_PASSWORD'] = '' # Senha do MySQL
+app.config['MYSQL_DB'] = 'flaskdocker' # Nome do banco de dados
 
 mysql = MySQL(app)
 
@@ -31,5 +31,5 @@ def inserthost():
 
   return username
 
-if __name__ == "__main__":
+if __name__ == "__main__": # Executa a aplicação
   app.run(host="0.0.0.0", debug=True, port="5000")

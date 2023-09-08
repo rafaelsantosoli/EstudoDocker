@@ -41,6 +41,7 @@ No terminal, clone o projeto:
     - [Executando um contêiner](#executando-um-contêiner)
     - [Gerenciando contêineres](#gerenciando-contêineres)
     - [Gerenciando imagens](#gerenciando-imagens)
+  - [Livros:](#livros)
   - [✔️ Técnicas e tecnologias utilizadas](#️-técnicas-e-tecnologias-utilizadas)
 - [Referências](#referências)
 
@@ -150,6 +151,11 @@ Para gerenciar imagens, use os seguintes comandos:
 - ``docker pull <image>``: baixa uma imagem do Docker Hub.
 - ``docker push <image>``: envia uma imagem para o Docker Hub.
 - ``docker rmi <image>``: remove uma imagem.
+
+## Livros:
+
+- [Por que usar Docker?](https://stack.desenvolvedor.expert/appendix/docker/porque.html)
+
 
 ## ✔️ Técnicas e tecnologias utilizadas
 

@@ -39,19 +39,18 @@ Flask é um microframework para Python utilizado para criar aplicações web.
 
 FROM python:3
 
-RUN apt-get update && apt-get install -y \
-    python3-pip \
-    python3-dev    
+RUN apt-get update -y && \
+  apt-get install -y python3-pip python-dev-is-python3
 
 WORKDIR /app
 
-RUN pip install flask requests flask_mysqldb
+RUN pip install Flask requests flask_mysqldb
 
 COPY . .
 
 EXPOSE 5000
 
-CMD ["python", "app.py"]
+CMD ["python", "./app.py"]
 
 ```
 
@@ -142,11 +141,10 @@ VOLUME ["/backup/"]
 CREATE DATABASE flaskdocker;
 USE flaskdocker;
 
-CREATE TABLE flaskdocker (
-    id INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(100) NOT NULL,    
-    PRIMARY KEY (id)
-);
+CREATE TABLE `flaskdocker`.`users` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `name` VARCHAR(255),
+  PRIMARY KEY (ID));
 
 ```
 
@@ -226,3 +224,5 @@ show tables;
 select * from flaskdocker;
 
 ```
+
+![MySQL](./Imagens/MySQL.png)

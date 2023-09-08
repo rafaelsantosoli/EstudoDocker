@@ -22,7 +22,6 @@
         "esbenp.prettier-vscode",
         "yzhang.markdown-all-in-one",
         "clarkyu.vscode-sql-beautify",
-        "docsmsft.docs-yaml",
-        "bierner.markdown-yaml-preamble"
+        "docsmsft.docs-yaml",        
     ]
 }

@@ -1,0 +1,26 @@
+
+version: '3.3' # Versão do Compose que estamos utilizando. # A ultima versão é a 3.7, mas a 3.3 é a mais estável.
+
+services: # Lista de serviços que iremos utilizar.
+  db: # Container de MySQL
+    image: mysql:5.7 # Imagem que iremos utilizar
+    volumes: # Lista de volumes que iremos utilizar
+      - db_data:/var/lib/mysql # Volume para armazenar os dados do MySQL
+    restart: always # Sempre que o container for reiniciado, ele irá iniciar o MySQL
+    env_file: # Arquivo de variáveis de ambiente
+      - ./Config/db.env # Arquivo de variáveis de ambiente
+
+
+  wordpress: # Container de WordPress
+    depends_on: # Dependência do container
+      - db # Container que o WordPress depende
+    image: wordpress:latest # Imagem que iremos utilizar
+    ports: # Portas que iremos utilizar
+      - "8000:80" # Porta do container: Porta do host
+    restart: always # Sempre que o container for reiniciado, ele irá iniciar o WordPress
+    env_file:
+      - ./Config/wp.env # Arquivo de variáveis de ambiente
+
+
+volumes: # Lista de volumes que iremos utilizar
+  db_data: {} # Volume para armazenar os dados do MySQL
