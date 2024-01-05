@@ -1,0 +1,22 @@
+# Utilizando banco de dados Postgres no docker
+
+version: '3.3'
+
+services: #serviços que serão utilizados
+  db: #nome do serviço
+    image: postgres #imagem que será utilizada
+    restart: always #sempre que reiniciar o docker, o serviço será reiniciado
+    env_file: #arquivo de variáveis de ambiente
+      - ./config/db.env #arquivo de variáveis de ambiente
+
+volumes: #volumes que serão utilizados
+  db-data: {} #nome do volume
+
+networks: #redes que serão utilizadas
+  default: #nome da rede
+    external: #rede externa
+      name: postgres #nome da rede externa
+
+
+
+
