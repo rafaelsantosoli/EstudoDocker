@@ -3,7 +3,7 @@ version: '3.7'
 
 services:
   postgres:
-    image: postgres:15.3-alpine
+    image: totvsengpro/postgres-dev:latest
     container_name: postgres
     env_file:
       - ./config/postgres.env
