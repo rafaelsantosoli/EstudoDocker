@@ -86,6 +86,17 @@ docker stats
 
 - Imagem: ubuntu:latest
 
+Para remover todos os containers, imagens e volumes utilizamos os comandos:
+
+```bash
+
+docker system prune -a
+
+```
+
+Este comando irá remover todos os containers, imagens e volumes.
+
+
 
 
 

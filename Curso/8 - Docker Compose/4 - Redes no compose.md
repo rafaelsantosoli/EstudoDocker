@@ -67,3 +67,7 @@ docker-compose up -d
 ```
 
 ![Networks](./Imagens/Networks.png)
+
+
+docker-compose -f docker-compose.yml up
+

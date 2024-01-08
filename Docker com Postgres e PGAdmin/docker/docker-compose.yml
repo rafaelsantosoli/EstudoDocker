@@ -1,0 +1,38 @@
+
+version: '3.7'
+
+services:
+  postgres:
+    image: postgres:15.3-alpine
+    container_name: postgres
+    env_file:
+      - ./config/postgres.env
+    restart: always
+    ports:
+      - 5432:5432
+    volumes:
+      - /home/docker/postgres:/var/lib/postgresql/data
+    networks:
+      - postgres-network
+
+  pgadmin:
+    depends_on:
+      - postgres
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    env_file:
+      - ./config/pgadmin.env    
+    restart: always
+    volumes:
+      - pgadmin-data:/var/lib/pgadmin
+    ports:
+      - 15432:80    
+    networks:
+      - postgres-network
+
+volumes:  
+  pgadmin-data:
+
+networks:
+    postgres-network:
+        driver: bridge

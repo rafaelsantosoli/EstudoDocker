@@ -96,9 +96,10 @@ wsl --list --verbose
 2. Escolha a versão mais recente do Alpine Linux para WSL2.
 3. Escolha a arquitetura do processador.
 4. Escolha o tipo de instalação.
-   ![MINI ROOT FILESYSTEM](/Alpine%20Linux/Imagens/Escolha_plataforma.png)
+   ![MINI ROOT FILESYSTEM](/Alpine%20Linux/Imagens/Escolha_plataforma.png)   
 5. Apos baixar o arquivo, mova o arquivo para o diretório desejado.
 6. Abra o PowerShell como administrador e execute o comando abaixo:
+
 
     ```bash
 
@@ -110,11 +111,11 @@ wsl --list --verbose
 
     ```bash
 
-    wsl --import Alpine D:\WSL\Alpine D:\WSL\Alpine\alpine-minirootfs-3.14.2-x86_64.tar.gz
+    wsl --import Alpine E:\WSL\Alpine E:\WSL\Distribuições\alpine-minirootfs-3.19.0-x86_64.tar.gz
 
     ```
     Será criado um arquivo chamado ext4.vhdx, esse arquivo é o disco virtual da distro Linux.
-    ![Importação da Distro](/Alpine%20Linux/Imagens/Importacao_distro.png)
+    ![Importação da Distro](imagens/Importacao_distro.png)
 
     Se o comando for executado com sucesso, será exibido a mensagem abaixo:
 
@@ -132,7 +133,7 @@ wsl --list --verbose
     wsl --list --verbose
 
     ```
-    ![Lista de Distribuições instaladas](/alpine%20linux/Imagens/Lista_Distribuicoes.png)
+    ![Lista de Distribuições instaladas](Imagens/Lista_Distribuicoes.png)
 
     Explicando o comando: `wsl --list --verbose`
     - `wsl`: Comando para executar o WSL.
@@ -155,6 +156,20 @@ wsl --list --verbose
     - `--distribution`: Define a distribuição WSL a ser executada.
     - `<distro>`: Nome da distribuição WSL a ser executada.
       - `Alpine`: Nome da distribuição WSL a ser executada.
+
+## Instalando Linux Alpine da Microsoft Store
+
+Habilitar WSL
+Abra o PowerShell como administrador e execute:
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+
+Atualizar janelas para programa interno
+wsl --set-default-versão 2
+
+Instale o Alpine #https://www.microsoft.com/en-in/p/alpine-wsl/9p804crf0395?activetab=pivot:overviewtab
+Instale o Terminal do Windows #https://www.microsoft.com/en-us/p/windows-terminal-preview/9n0dx20hk701
+
 
 ## Exibindo informações sobre o sistema operacional.
 
@@ -233,7 +248,144 @@ wsl --list --verbose
 
 ## Configurando Alpine Linux
 
-1. Execute o comando abaixo para atualizar o sistema:
+Acesse com usuário root.
+
+Terminal aberto
+fazendo login com root (wsl.exe --distribution Alpine --user root)
+
+```bash	
+
+wsl.exe --distribution Alpine --user root
+
+```
+
+definindo uma senha root (passwd)
+
+```bash
+
+passwd
+
+```
+
+Instalando o Sudo (apk add sudo)
+
+```bash
+
+apk add sudo
+
+```
+
+Descementar uma linha no arquivo /etc/sudoers para permitir que qualquer pessoa use o sudo que esteja no grupo sudo (%sudo ALL=(ALL) ALL),
+
+```bash
+
+nano /etc/sudoers
+
+```
+
+![sudo_all](imagens/sudo_all.png)
+
+crie um grupo sudo 
+
+```bash
+
+addgroup sudo
+
+```
+
+adicione o usuário atual ao grupo sudo
+
+```bash
+
+adduser <username> sudo
+
+```
+
+substitua <username> pelo nome do usuário atual
+
+Para nome do usuário atual, execute o comando abaixo:
+
+```bash
+
+whoami
+
+```
+
+Depois de definir a senha do usuário padrão, feche e reabra o console Alpine.
+
+```bash
+
+passwd <username>
+
+```
+
+Para verificar se o usuário atual está no grupo sudo, execute o comando abaixo:
+
+```bash
+
+groups
+
+```
+
+Configuração Alpine --default-user root
+
+```bash
+
+echo '[automount]
+options = "metadata"' > /etc/wsl.conf
+
+```
+
+Atualizar o sistema
+
+```bash
+
+apk update
+
+```
+
+Instalar o zsh
+
+```bash
+
+apk add zsh curl git
+
+```
+
+Detalhes do comando: `apk add zsh curl git`
+
+- `apk`: Comando para gerenciamento de pacotes do Alpine Linux.
+- `add`: Adiciona um novo pacote.
+- `zsh`: Nome do pacote a ser instalado.
+- `curl`: Nome do pacote a ser instalado.
+- `git`: Nome do pacote a ser instalado.
+
+
+Instalar o Oh My Zsh
+
+```bash
+
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+```
+
+Detalhes do comandoo: `sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"`
+- `sh`: Comando para executar o shell.
+- `-c`: Executa o comando em modo de teste.
+- `$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)`: Executa o comando `curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh` e retorna o resultado para o comando `sh`.
+
+
+Instale Python3, Python3-dev e pip3
+
+```bash
+
+apk add python3 python3-dev py3-pip
+
+```
+
+## Demais comando para configurar o Alpine Linux
+
+Execute o comando abaixo para atualizar o sistema:
 
     ```bash
 
@@ -245,7 +397,8 @@ wsl --list --verbose
 
     - `apk`: Comando para gerenciamento de pacotes do Alpine Linux.
     - `update`: Atualiza os repositórios de pacotes do Alpine Linux.
-2. Com comando apk add openssh-client instala o cliente SSH.
+
+Com comando apk add openssh-client instala o cliente SSH.
    1. Com o cliente SSH instalado, é possível se conectar a outros servidores Linux.
 
     ```bash
@@ -260,7 +413,7 @@ wsl --list --verbose
     - `add`: Adiciona um novo pacote.
     - `openssh-client`: Nome do pacote a ser instalado.
 
-3. Com comando df -th exibe informações sobre o sistema de arquivos.
+Com comando df -th exibe informações sobre o sistema de arquivos.
     
     ```bash
 
@@ -273,7 +426,7 @@ wsl --list --verbose
     - `df`: Comando para exibir informações sobre o sistema de arquivos.
     - `-th`: Exibe informações sobre o sistema de arquivos em formato legível.
 
-3. Para adicionar um usuário execute o comando abaixo:
+Para adicionar um usuário execute o comando abaixo:
 
     ```bash
 
@@ -285,7 +438,7 @@ wsl --list --verbose
 
     - `adduser`: Comando para adicionar um novo usuário.
     - `<username>`: Nome do usuário a ser adicionado.
-3. Para definir o usuário padrão, execute o comando abaixo:
+Para definir o usuário padrão, execute o comando abaixo:
 
     ```bash
 
@@ -299,7 +452,7 @@ wsl --list --verbose
     - `-D`: Define o usuário como padrão.
     - `<username>`: Nome do usuário a ser adicionado.
 
-4. Para obter acesso root, execute o comando abaixo:
+Para obter acesso root, execute o comando abaixo:
 
     ```bash
 
@@ -311,7 +464,7 @@ wsl --list --verbose
 
     - `su`: Comando para obter acesso root.
 
-5. Utilizando comando `sudo` para executar comandos como root.
+Utilizando comando `sudo` para executar comandos como root.
 
     ```bash
 
@@ -324,7 +477,7 @@ wsl --list --verbose
     - `sudo`: Comando para executar comandos como root.
     - `<command>`: Comando a ser executado como root.
 
-6. Para alterar a senha do usuário root, execute o comando abaixo:
+Para alterar a senha do usuário root, execute o comando abaixo:
 
     ```bash
 
@@ -336,7 +489,7 @@ wsl --list --verbose
 
     - `passwd`: Comando para alterar a senha do usuário atual.
 
-7. Para alterar a senha de um usuário, execute o comando abaixo:
+Para alterar a senha de um usuário, execute o comando abaixo:
 
     ```bash
 
@@ -527,34 +680,6 @@ Para iniciar o daemon do docker, execute o comando abaixo:
 sudo dockerd
 
 ```
-
-para iniciar o daemon do docker em segundo plano, execute o comando abaixo:
-
-```bash
-
-sudo dockerd -d
-
-```
-
-Para inicar o daemon do docker com o sistema, execute o comando abaixo:
-
-```bash
-
-sudo rc-update add docker boot
-
-```
-
-8. Caso comando systemctl não esteja disponível, execute o comando abaixo:
-
-```bash
-
-apk add openrc
-
-```
-
-Este comando irá instalar o `openrc`, que é um conjunto de scripts para gerenciamento de serviços do Alpine Linux.
-
-
 
 
 ## Instalando Docker Compose
