@@ -477,6 +477,12 @@ swap=8GB # Sets the size of the swap file in WSL 2 to 8 GB
 
 localhostForwarding=true # Forward localhost to WSL 2
 
+# Enable experimental features
+[experimental]
+sparseVhd=true # Enable sparse VHD support - Ativa a compactação de disco virtual para economizar espaço em disco.
+
+autoMemoryReclaim=gradual ou dropche: # Habilita a reivindicação automática de memória, libera memoria RAM não utilizada. Não usar quando for usar o WSL2 com Docker.
+
 ```
 
 - `memory`: define o limite de memória RAM que o WSL 2 pode usar.
@@ -486,6 +492,7 @@ localhostForwarding=true # Forward localhost to WSL 2
 - `true`: habilita o acesso ao localhost do Windows.
 - `false`: desabilita o acesso ao localhost do Windows.
 - `localhost`: define o endereço IP do localhost do Windows.
+- `autoMemoryReclaim`: habilita a reivindicação automática de memória, libera memoria RAM não utilizada.
 
 Exemplo:
 
@@ -525,6 +532,14 @@ wsl
 ```
 Este comando inicia o WSL 2.
 
+Outras configurações podem ser adicionadas ao arquivo .wslconfig, acessando o link abaixo:
+
+[Configurações do arquivo .wslconfig](https://learn.microsoft.com/pt-br/windows/wsl/wsl-config#main-wsl-settings)
+
+```powershell
+
+[wsl2]
+
 
 
 ## Links para guia de instalação
@@ -532,4 +547,6 @@ Este comando inicia o WSL 2.
 - [Instalando o WSL](https://learn.microsoft.com/pt-br/windows/wsl/install)
 - [Instalação Manual do WSL](https://learn.microsoft.com/pt-br/windows/wsl/install-manual)
 - [WSL e Docker](https://github.com/codeedu/wsl2-docker-quickstart)
-
+- [WSL - Windows Subsystem for Linux](https://youtu.be/-oxnRGhA9Mg?si=sDKEN_sxXT4_m226)
+- [Como montar o melhor ambiente Dev no Windows, Linux e Mac com WSL2
+](https://www.youtube.com/live/rpvjVtUPnOc?si=9yxSTRuPvR33ccXQ)

@@ -1,0 +1,22 @@
+---
+version: "3.2"
+services:
+  mssql-server22:
+    container_name: mssql-server22
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    environment:
+      SA_PASSWORD: "Th14g0m0r31r4$$" #used double $ for docker purpose, actually it is only one $
+      ACCEPT_EULA: "Y"
+      MSSQL_PID: "Developer"
+      # MSSQL_COLLATION: "Latin1_General_BIN"
+      # MSSQL_MEMORY_LIMIT_MB: "2048"
+    ports:
+      - "1433:1433"
+    volumes:
+      - /var/opt/mssql/sql1:/var/opt/mssql/data
+      - /var/opt/mssql/sql1:/var/opt/mssql/log
+    # command: /bin/bash ./tmp/init-basegeografica.sh
+#use 127.0.0.1,1433 to connect to the server
+#or
+#running 'ip a show eth0' 172.22.236.87,11433
+
